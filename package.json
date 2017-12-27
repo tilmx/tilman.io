@@ -11,7 +11,6 @@
     "less-plugin-clean-css": "^1.5.1",
     "meow": "^4.0.0",
     "nodemon": "^1.12.1",
-    "now": "^8.5.4",
     "serve": "^6.4.3"
   },
   "scripts": {
