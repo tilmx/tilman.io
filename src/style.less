@@ -65,6 +65,14 @@ h2 {
 	font-size: 5em;
 	margin: 0;
 	.medium;
+
+	@media @tablet {
+		font-size: 3em;
+	}
+
+	@media @mobile {
+		font-size: 2em;
+	}
 }
 
 h3 {
@@ -212,53 +220,6 @@ a {
 	}
 }
 
-.clients {
-	margin: 200px auto;
-
-	@media @tablet {
-		margin-top: 0;
-		margin-bottom: 200px;
-	}
-
-	@media @mobile {
-		margin-bottom: 100px;
-	}
-
-	&-item {
-		width: 33.3%;
-		float: left;
-		text-align: center;
-		margin: 50px 0;
-		line-height: 200px;
-
-		@media @tablet {
-			line-height: 150px;
-			margin: 0;
-		}
-
-		@media @mobile {
-			width: 50%;
-		}
-
-		img {
-			max-width: 80%;
-			max-height: 100px;
-			vertical-align: middle;
-
-			@media @mobile {
-				max-width: 60%;
-				max-height: 75px;
-			}
-		}
-	}
-
-	&:after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-}
-
 .quote {
 	p {
 		.offset;
@@ -276,6 +237,10 @@ a {
 	&-item {
 		padding: 200px 0;
 		text-align: center;
+		
+		@media @mobile {
+			padding: 100px 0;
+		}
 
 		p {
 			max-width: 640px;
@@ -285,6 +250,10 @@ a {
 
 		&-hero {
 			margin-bottom: 100px;
+			
+			@media @mobile {
+				margin-bottom: 50px;
+			}
 		}
 
 		&-image {
@@ -296,6 +265,10 @@ a {
 
 		&-outro {
 			margin-top: 100px;
+			
+			@media @mobile {
+				margin-top: 50px;
+			}
 
 			p {
 				color: @white;
@@ -325,16 +298,16 @@ a {
 		&.cases-item--ed {
 			background-color: #e5B4a6;
 			color: @white;
-			
+
 			.button {
 				color: #e5B4a6;
 			}
 		}
 		&.cases-item--wb {
-			background-color: #f7f7f7;
+			background-color: #f2f2f2;
 
 			.button {
-				color: #f79d74;
+				margin-top: 50px;
 			}
 		}
 	}
