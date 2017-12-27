@@ -235,11 +235,30 @@ a {
 
 .cases {
 	&-item {
-		padding: 200px 0;
+		padding: 350px 0 0;
+		margin-bottom: -90px;
 		text-align: center;
 		
 		@media @mobile {
-			padding: 100px 0;
+			padding-top: 175px;
+			margin-bottom: -40px;
+		}
+		
+		&:first-of-type {
+			padding-top: 200px;
+			
+			@media @mobile {
+				padding-top: 100px;
+			}
+		}
+		
+		&:last-of-type {
+			margin-bottom: 0;
+			padding-bottom: 100px;
+			
+			@media @mobile {
+				padding-bottom: 50px;
+			}
 		}
 
 		p {
@@ -250,9 +269,22 @@ a {
 
 		&-hero {
 			margin-bottom: 100px;
+
+			p {
+				color: @white;
+
+				&:first-of-type {
+					color: fade(@black, 50%);
+					margin-bottom: 0;
+				}
+			}
 			
-			@media @mobile {
-				margin-bottom: 50px;
+			h2 {
+				margin-bottom: 25px;
+			}
+			
+			.button {
+				margin-top: 25px;
 			}
 		}
 
@@ -261,22 +293,6 @@ a {
 			width: 100%;
 			border-radius: 3px;
 			box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-		}
-
-		&-outro {
-			margin-top: 100px;
-			
-			@media @mobile {
-				margin-top: 50px;
-			}
-
-			p {
-				color: @white;
-			}
-
-			.button {
-				margin-top: 25px;
-			}
 		}
 
 		&.cases-item--alva {
