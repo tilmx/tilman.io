@@ -1,3 +1,3 @@
 /preview/*  https://preview.tilman.io/:splat  200
-/burger/*  https://burger.tilman.io/:splat  200
+/burger/*  https://burger.tilman.io/:splat
 /*  /404.html  404
