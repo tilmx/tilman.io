@@ -290,6 +290,8 @@ a {
 		&-image {
 			display: block;
 			width: 100%;
+			border-radius: 3px;
+			box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
 		}
 
 		&-outro {
@@ -305,21 +307,28 @@ a {
 		}
 
 		&.cases-item--alva {
-			background-color: #66A9E6;
+			background-color: #66a9e6;
 			color: @white;
 
-			.cases-item-image {
-				border-radius: 3px;
-				box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
-			}
-
 			.button {
-				color: #66A9E6;
+				color: #66a9e6;
 			}
 		}
 		&.cases-item--ezb {
-			background-color: #69757F;
+			background-color: #69757f;
 			color: @white;
+
+			.button {
+				color: #69757f;
+			}
+		}
+		&.cases-item--ed {}
+		&.cases-item--wb {
+			background-color: #f79d74;
+
+			.button {
+				color: #f79d74;
+			}
 		}
 	}
 }
