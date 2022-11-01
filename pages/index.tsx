@@ -33,7 +33,7 @@ export default function Home() {
 				</OffsetArea>
 				<Space vertical={Size.XXXXL} />
 
-				<Image image='images/tilman.jpg' />
+				<Image image='./images/tilman.jpg' />
 				<Space vertical={Size.XXXS} />
 				<Text size={TextSize.Small} color={theme.colors.textVariant} style={{ textAlign: 'right' }}>&copy; Foto: Jan Brinkmann</Text>
 				<Space vertical={Size.XXXXL} />
@@ -50,7 +50,7 @@ export default function Home() {
 				description='A radically new digital design tool built for cross-functional product teams. Alva lets you design interactive products based on the same components your engineers are using for production websites.'
 				button='Explore on GitHub'
 				link='https://github.com/meetalva'
-				image='images/case-alva.png'
+				image='./images/case-alva.png'
 				backgroundColor='#E24772'
 			/>
 			<Case
@@ -59,7 +59,7 @@ export default function Home() {
 				description='Einzimmer Küche Bar is a minimalistic restaurant with focus on exceptional quality cuisine based in Nuremberg, Germany.'
 				button='Explore einzimmerkuechebar.de'
 				link='http://einzimmerkuechebar.de/'
-				image='images/case-ezb.png'
+				image='./images/case-ezb.png'
 				backgroundColor='#69757f'
 			/>
 			<Case
@@ -68,7 +68,7 @@ export default function Home() {
 				description='elbdudler is a social media agency based in Hamburg that works on creative concepts and integrated communication strategies.'
 				button='Explore elbdudler.de'
 				link='https://elbdudler.de/'
-				image='images/case-ed.jpg'
+				image='./images/case-ed.jpg'
 				backgroundColor='#e5B4a6'
 			/>
 			<BackgroundColor color={theme.colors.background} style={{ marginTop: '-' + Size.XXL }}>
@@ -82,8 +82,8 @@ export default function Home() {
 					<Text center>(040) 42 104 550</Text>
 					<Text center><ExternalLink link="mailto:sayhello@tilman.io">sayhello@tilman.io</ExternalLink></Text>
 					<Space vertical={Size.XXL} />
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
+					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/sites-notice">Site's Notice</InternalLink></Text>
+					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/privacy-policy">Privacy Police</InternalLink></Text>
 					<Space vertical={Size.XXL} />
 				</WidthLimiter>
 			</Wrapper>

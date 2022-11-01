@@ -39,10 +39,8 @@ export const themeLight: ThemeType = { colors: colorsLight };
 export const themeDark: ThemeType = { colors: colorsDark };
 
 export const Theme: React.FunctionComponent<{ children?: React.ReactNode }> = props => {
-    const [darkMode, setDarkMode] = React.useState(false);
-
     return (
-        <ThemeProvider theme={darkMode ? themeDark : themeLight}>
+        <ThemeProvider theme={themeLight}>
             {props.children}
         </ThemeProvider>
     )
