@@ -45,6 +45,7 @@ export default function Home() {
 			</Wrapper>
 
 			<Case
+				noNegativeMargin
 				topline='Co-Founder & Product Lead'
 				title='Meet Alva'
 				description='A radically new digital design tool built for cross-functional product teams. Alva lets you design interactive products based on the same components your engineers are using for production websites.'

@@ -19,15 +19,18 @@ interface CaseProps {
 	link: string;
 	image: string;
 	backgroundColor: string;
+
+	noNegativeMargin?: boolean;
 }
 
 export const Case: React.FunctionComponent<CaseProps> = props => {
 	const theme = useTheme();
 
 	return (
-		<BackgroundColor color={props.backgroundColor} style={{ marginTop: '-'+Size.XXL }}>
+		<BackgroundColor color={props.backgroundColor} style={{ marginTop: props.noNegativeMargin ? undefined : '-'+Size.XXL }}>
 			<Wrapper>
-				<Space vertical={Size.XXXXXL} />
+				{!props.noNegativeMargin && <Space vertical={Size.XXL} />}
+				<Space vertical={Size.XXXXL} />
 				<WidthLimiter>
 					<Text size={TextSize.Regular} color={theme.colors.textVariant} center>{props.topline}</Text>
 					<Space vertical={Size.XXS} />
