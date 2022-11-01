@@ -11,19 +11,19 @@ import { InternalLink } from '../components/utils/internal-link'
 import { ChevronRight } from 'lucide-react'
 
 
-export default function Home() {
+export default function Error404() {
 	const theme = useTheme();
 	return (
 		<div>
 			<Head>
-				<title>Seite nicht gefunden</title>
+				<title>Site not found</title>
 			</Head>
 			<Wrapper>
 				<Space vertical={Size.XL} />
 				<Logo />
 				<OffsetArea>
 					<Space vertical={Size.XXXL} />
-					<Text size={TextSize.Huge}>Fehler 404. Mit Liebe verloren.</Text>
+					<Text size={TextSize.Huge}>Error 404. Mit Liebe verloren.</Text>
 					<Space vertical={Size.M} />
 					<Flex alignItems={FlexAlignItems.Center}>
 						<Text size={TextSize.Large} color={theme.colors.textVariant}>

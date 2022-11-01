@@ -82,7 +82,7 @@ export default function Home() {
 					<Text center>(040) 42 104 550</Text>
 					<Text center><ExternalLink link="mailto:sayhello@tilman.io">sayhello@tilman.io</ExternalLink></Text>
 					<Space vertical={Size.XXL} />
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/sites-notice">Site’s Notice</InternalLink></Text>
+					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
 					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
 					<Space vertical={Size.XXL} />
 				</WidthLimiter>
