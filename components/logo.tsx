@@ -5,6 +5,67 @@ const StyledLogoWrapper = styled.div`
 	width: 40px;
 	height: 40px;
 	position: relative;
+
+	&:hover {
+		> div {
+			-moz-animation: logohorizontal 0.5s;
+			-webkit-animation: logohorizontal 0.5s;
+			animation: logohorizontal 0.5s;
+		}
+		> div:first-child {
+			-moz-animation: logoborder 0.5s;
+			-webkit-animation: logoborder 0.5s;
+			animation: logoborder 0.5s;
+		}
+		> div:last-child {
+			-moz-animation: logovertical 0.5s;
+			-webkit-animation: logovertical 0.5s;
+			animation: logovertical 0.5s;
+		}
+	}
+
+	// ANIMATIONS
+	@-webkit-keyframes logoborder {
+		0%,
+		100% {
+			transform: scale(1);
+		}
+		50% {
+			transform: scale(1.1);
+		}
+	}
+
+	@-webkit-keyframes logohorizontal {
+		0%,
+		100% {
+			transform: translate3d(0, 0, 0);
+			height: 4px;
+		}
+		40% {
+			transform: translate3d(25px, 0, 0);
+			height: 0;
+		}
+		60% {
+			transform: translate3d(-25px, 0, 0);
+			height: 0;
+		}
+	}
+
+	@-webkit-keyframes logovertical {
+		0%,
+		100% {
+			transform: translate3d(0, 0, 0);
+			width: 4px;
+		}
+		40% {
+			transform: translate3d(0, 25px, 0);
+			width: 0;
+		}
+		60% {
+			transform: translate3d(0, -25px, 0);
+			width: 0;
+		}
+	}
 `
 
 const StyledLogoOutline = styled.div`
