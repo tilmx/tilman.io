@@ -5,10 +5,13 @@ import { Logo } from '../components/logo'
 import { OffsetArea } from '../components/offset-area'
 import { Text, TextSize } from '../components/text'
 import { Size } from '../components/tokens/size'
-import { Link } from '../components/utils/link'
+import { ExternalLink } from '../components/utils/link'
 import { Space } from '../components/utils/space'
+import { WidthLimiter } from '../components/width-limiter'
 import { Wrapper } from '../components/wrapper'
 import { Case } from '../container/case'
+import NextLink from 'next/link';
+
 
 export default function Home() {
 	const theme = useTheme();
@@ -25,7 +28,7 @@ export default function Home() {
 					<Space vertical={Size.XXXL} />
 					<Text size={TextSize.Huge}>Tilman Frick is a digital designer and music producer currently based in Hamburg, Germany.</Text>
 					<Space vertical={Size.M} />
-					<Text size={TextSize.Large} color={theme.colors.textVariant}>Working at <Link link='https://tomorrow.one'>Tomorrow</Link>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
+					<Text size={TextSize.Large} color={theme.colors.textVariant}>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
 				</OffsetArea>
 				<Space vertical={Size.XXXXL} />
 
@@ -67,30 +70,21 @@ export default function Home() {
 				image='images/case-ed.jpg'
 				backgroundColor='#e5B4a6'
 			/>
-
+			
 			<Space vertical={Size.XXXXXL} />
-
-
-			{/*
-
-
-	
-  <footer>
-		<div class="limit">
-			<div class="footer-content">
-				<h3>Get in touch</h3>
-				<p>
-					Tilman Frick<br> (040) 42 104 550<br>
-					<a href="mailto:sayhello@tilman.io">sayhello@tilman.io</a>
-				</p>
-				<a href="sitesnotice.html" class="sitesnotice">Site’s Notice</a>
-				<a href="privacypolicy.html" class="sitesnotice">Privacy Police</a>
-			</div>
-		</div>
-	</footer>
-
-  */}
-
+			<Wrapper>
+				<WidthLimiter>
+					<Text color={theme.colors.textVariant} center>Get in touch</Text>
+					<Space vertical={Size.M} />
+					<Text center>Tilman Frick</Text>
+					<Text center>(040) 42 104 550</Text>
+					<Text center><ExternalLink link="mailto:sayhello@tilman.io">sayhello@tilman.io</ExternalLink></Text>
+					<Space vertical={Size.XXL} />
+					<Text size={TextSize.Small} color={theme.colors.textVariant} center><NextLink href="/legal/sites-notice" style={{ color: 'inherit', textDecoration: 'none' }}>Site’s Notice</NextLink></Text>
+					<Text size={TextSize.Small} color={theme.colors.textVariant} center><NextLink href="/legal/privacy-policy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Police</NextLink></Text>
+					<Space vertical={Size.XXL} />
+				</WidthLimiter>
+			</Wrapper>
 		</div>
 	)
 }

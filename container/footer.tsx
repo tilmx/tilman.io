@@ -3,7 +3,7 @@ import { Text, TextSize } from '../components/text';
 import { Size } from '../components/tokens/size';
 import { useTheme } from '../components/tokens/theme';
 import { Space } from '../components/utils/space';
-import { Link } from '../components/utils/link';
+import { ExternalLink } from '../components/utils/link';
 import { Center } from '../components/utils/center';
 
 export const Footer: React.FunctionComponent = () => {
@@ -17,9 +17,9 @@ export const Footer: React.FunctionComponent = () => {
                 { label: "Privacy Policy", link: "https://tilman.io/privacypolicy.html" },
             ].map((item, i) =>
                 <Center horizontal key={i}>
-                    <Link link={item.link}>
+                    <ExternalLink link={item.link}>
                         <Text size={TextSize.Small} color={theme.colors.textVariant} center>{item.label}</Text>
-                    </Link>
+                    </ExternalLink>
                 </Center>
             )}
             <Space vertical={Size.L} />

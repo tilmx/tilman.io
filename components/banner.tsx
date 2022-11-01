@@ -5,7 +5,7 @@ import { Size } from './tokens/size';
 import { useTheme } from './tokens/theme';
 import { ChevronRight } from 'lucide-react';
 import { Animation } from './utils/animation';
-import { Link } from './utils/link';
+import { ExternalLink } from './utils/link';
 import { Flex, FlexAlignItems, FlexJustifyContent } from './utils/flex';
 import { Space } from './utils/space';
 
@@ -35,7 +35,7 @@ export const Banner: React.FunctionComponent<{ text: string; image: string; link
 
     return (
         <Animation>
-            <Link link={props.link}>
+            <ExternalLink link={props.link}>
                 <StyledContainer>
                     <Flex alignItems={FlexAlignItems.Center} justifyContent={FlexJustifyContent.SpaceBetween}>
                         <Flex alignItems={FlexAlignItems.Center}>
@@ -46,7 +46,7 @@ export const Banner: React.FunctionComponent<{ text: string; image: string; link
                         <ChevronRight color={theme.colors.text} />
                     </Flex>
                 </StyledContainer>
-            </Link>
+            </ExternalLink>
         </Animation>
     )
 }
