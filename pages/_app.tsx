@@ -12,19 +12,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="language" content="en" />
         <meta name="referrer" content="no-referrer" />
       </Head>
-      <Global
-        styles={css`
-          body { margin: 0 };
-          @font-face {
-            font-family: 'Manrope';
-            font-style: normal;
-            font-weight: 600;
-            src: local(''),
-              url('../fonts/manrope-v13-latin-600.woff2') format('woff2'),
-              url('../fonts/manrope-v13-latin-600.woff') format('woff');
-          }
-        `}
-      />
+      <Global styles={css`body { margin: 0 };`} />
       <Component {...pageProps} />
     </Theme>
   );

@@ -14,6 +14,7 @@ import { BackgroundColor } from '../components/background-color'
 import { InternalLink } from '../components/utils/internal-link'
 
 import ImageTilman from '../public/images/tilman.jpg';
+import ImageCaseTom from '../public/images/case-tom.png';
 import ImageCaseAlva from '../public/images/case-alva.png';
 import ImageCaseEd from '../public/images/case-ed.jpg';
 import ImageCaseEzb from '../public/images/case-ezb.png';
@@ -50,6 +51,17 @@ export default function Home() {
 
 			<Case
 				noNegativeMargin
+				topline='Lead Product Designer'
+				title='Tomorrow'
+				description='The company is the first European stakeholder to combine mobile banking and sustainable finances. Since March 2019, the social business from Hamburg has been offering its current account and already has over 120,000 customers. Its long-term aim is to create a digital platform focused on finances with a positive impact.'
+				button='Explore tomorrow.one'
+				link='https://tomorrow.one'
+				image={ImageCaseTom}
+				imageAlt="Screenshot of Tomorrow App"
+				backgroundColor='#FF916E'
+				smartphoneScreen
+			/>
+			<Case
 				topline='Co-Founder & Product Lead'
 				title='Meet Alva'
 				description='A radically new digital design tool built for cross-functional product teams. Alva lets you design interactive products based on the same components your engineers are using for production websites.'
