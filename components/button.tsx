@@ -5,9 +5,10 @@ import { Text } from './text';
 interface ButtonProps {
     children?: React.ReactNode;
     textColor?: string;
+    link?: string;
 }
 
-const StyledWrapper = styled.div`
+const StyledWrapper = styled.a`
     display: inline-block;
     background-color: ${props => props.theme.colors.background};
     color: @black;
@@ -23,7 +24,7 @@ const StyledWrapper = styled.div`
 
 export const Button: React.FunctionComponent<ButtonProps> = props => {
     return (
-        <StyledWrapper>
+        <StyledWrapper href={props.link} target='_blank'>
             <Text color={props.textColor}>
                 {props.children}
             </Text>

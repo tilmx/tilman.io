@@ -37,7 +37,7 @@ export const Case: React.FunctionComponent<CaseProps> = props => {
 				</WidthLimiter>
 				<Space vertical={Size.XL} />
 				<Center horizontal>
-					<Button textColor={props.backgroundColor}>{props.button}</Button>
+					<Button link={props.link} textColor={props.backgroundColor}>{props.button}</Button>
 				</Center>
 				<Space vertical={Size.XXXL} />
 				<Image image={props.image} style={{ borderRadius: '3px', boxShadow: '0 0 50px rgba(0, 0, 0, 0.3)' }} />
