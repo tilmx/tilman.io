@@ -21,7 +21,7 @@ interface ThemeColors {
 
 const colorsLight: ThemeColors = {
     text: '#13141A',
-    textVariant: '#838f9b',
+    textVariant: 'rgba(0,0,0,0.6)',
     background: '#ffffff',
     backgroundVariant: '#F3F5F6',
     accent: '#585EE2'

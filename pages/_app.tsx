@@ -14,7 +14,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
       <Global
         styles={css`
-          body { margin: 0; user-select: none };
+          body { margin: 0 };
           @font-face {
             font-family: 'Manrope';
             font-style: normal;

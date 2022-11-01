@@ -10,8 +10,8 @@ const StyledImage = styled.img`
     background-color: ${props => props.theme.colors.text};
 `
 
-export const Image: React.FunctionComponent<{ image: string; }> = props => {
+export const Image: React.FunctionComponent<{ image: string; style?: React.CSSProperties }> = props => {
     return (
-        <StyledImage src={props.image} />
+        <StyledImage src={props.image} style={props.style} />
     )
 }

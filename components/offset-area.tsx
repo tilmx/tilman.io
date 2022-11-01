@@ -16,18 +16,7 @@ const StyledWrapper = styled.div`
 		width: 100%;
 		margin-left: 0;
 	}
-
-	/*p {
-		max-width: 480px;
-
-		@media @tablet {
-			max-width: none;
-		}
-	}
-
-	*/
-}
-`
+`;
 
 export const OffsetArea: React.FunctionComponent< { children?: React.ReactNode } > = props => {
 	return (
