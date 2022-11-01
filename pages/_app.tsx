@@ -1,8 +1,7 @@
 import { css, Global } from '@emotion/react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Size, Space, Theme, Wrapper } from '../components';
-import { Footer } from '../container/footer';
+import { Theme } from '../components/tokens/theme';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -26,11 +25,7 @@ function App({ Component, pageProps }: AppProps) {
           }
         `}
       />
-      <Wrapper>
-        <Space vertical={Size.XXL} />
-        <Component {...pageProps} />
-      </Wrapper>
-      <Footer />
+      <Component {...pageProps} />
     </Theme>
   );
 }

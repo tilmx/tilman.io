@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled'
-import { Size } from './tokens';
-import { Animation } from './utils';
+import { Size } from './tokens/size';
+import { Animation } from './utils/animation';
 
 const StyledContainer = styled.div`
     display: relative;

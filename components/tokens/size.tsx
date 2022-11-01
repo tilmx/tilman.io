@@ -9,5 +9,6 @@ export enum Size {
 	XL = '48px',
 	XXL = '72px',
 	XXXL = '96px',
-    XXXXL = '256px'
+    XXXXL = '168px',
+    XXXXXL = '256px'
 }

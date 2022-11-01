@@ -16,13 +16,15 @@ interface ThemeColors {
     textVariant: string;
     background: string;
     backgroundVariant: string;
+    accent: string;
 }
 
 const colorsLight: ThemeColors = {
-    text: '#24292F',
-    textVariant: 'rgba(36,41,47,0.6)',
+    text: '#13141A',
+    textVariant: '#838f9b',
     background: '#ffffff',
     backgroundVariant: '#F3F5F6',
+    accent: '#585EE2'
 }
 
 const colorsDark: ThemeColors = {
@@ -30,6 +32,7 @@ const colorsDark: ThemeColors = {
     textVariant: 'rgba(255,255,255,0.6)',
     background: '#191C20',
     backgroundVariant: '#24292F',
+    accent: '#585EE2'
 }
 
 export const themeLight: ThemeType = { colors: colorsLight };

@@ -1,9 +1,13 @@
 import * as React from 'react';
 import styled from '@emotion/styled'
 import { Text, TextSize } from './text';
-import { Size, useTheme } from './tokens';
+import { Size } from './tokens/size';
+import { useTheme } from './tokens/theme';
 import { ChevronRight } from 'lucide-react';
-import { Animation, Flex, FlexAlignItems, FlexJustifyContent, Link, Space } from './utils';
+import { Animation } from './utils/animation';
+import { Link } from './utils/link';
+import { Flex, FlexAlignItems, FlexJustifyContent } from './utils/flex';
+import { Space } from './utils/space';
 
 const StyledContainer = styled.div`
     display: relative;

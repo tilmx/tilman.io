@@ -1,7 +1,10 @@
 import * as React from 'react';
 import { Text, TextSize } from '../components/text';
-import { Size, useTheme } from '../components/tokens';
-import { Center, Link, Space } from '../components/utils';
+import { Size } from '../components/tokens/size';
+import { useTheme } from '../components/tokens/theme';
+import { Space } from '../components/utils/space';
+import { Link } from '../components/utils/link';
+import { Center } from '../components/utils/center';
 
 export const Footer: React.FunctionComponent = () => {
     const theme = useTheme();
