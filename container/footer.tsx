@@ -3,7 +3,7 @@ import { Text, TextSize } from '../components/text';
 import { Size } from '../components/tokens/size';
 import { useTheme } from '../components/tokens/theme';
 import { Space } from '../components/utils/space';
-import { ExternalLink } from '../components/utils/link';
+import { ExternalLink } from '../components/utils/external-link';
 import { Center } from '../components/utils/center';
 
 export const Footer: React.FunctionComponent = () => {

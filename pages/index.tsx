@@ -5,12 +5,13 @@ import { Logo } from '../components/logo'
 import { OffsetArea } from '../components/offset-area'
 import { Text, TextSize } from '../components/text'
 import { Size } from '../components/tokens/size'
-import { ExternalLink } from '../components/utils/link'
+import { ExternalLink } from '../components/utils/external-link'
 import { Space } from '../components/utils/space'
 import { WidthLimiter } from '../components/width-limiter'
 import { Wrapper } from '../components/wrapper'
 import { Case } from '../container/case'
-import NextLink from 'next/link';
+import { BackgroundColor } from '../components/background-color'
+import { InternalLink } from '../components/utils/internal-link'
 
 
 export default function Home() {
@@ -70,8 +71,9 @@ export default function Home() {
 				image='images/case-ed.jpg'
 				backgroundColor='#e5B4a6'
 			/>
-
-			<Space vertical={Size.XXXXXL} />
+			<BackgroundColor color={theme.colors.background} style={{ marginTop: '-' + Size.XXL }}>
+				<Space vertical={Size.XXXXXL} />
+			</BackgroundColor>
 			<Wrapper>
 				<WidthLimiter>
 					<Text color={theme.colors.textVariant} center>Get in touch</Text>
@@ -80,8 +82,8 @@ export default function Home() {
 					<Text center>(040) 42 104 550</Text>
 					<Text center><ExternalLink link="mailto:sayhello@tilman.io">sayhello@tilman.io</ExternalLink></Text>
 					<Space vertical={Size.XXL} />
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><NextLink href="/legal/sites-notice" style={{ color: 'inherit', textDecoration: 'none' }}>Site’s Notice</NextLink></Text>
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><NextLink href="/legal/privacy-policy" style={{ color: 'inherit', textDecoration: 'none' }}>Privacy Police</NextLink></Text>
+					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/sites-notice">Site’s Notice</InternalLink></Text>
+					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
 					<Space vertical={Size.XXL} />
 				</WidthLimiter>
 			</Wrapper>

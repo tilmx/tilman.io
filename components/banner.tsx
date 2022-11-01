@@ -5,7 +5,7 @@ import { Size } from './tokens/size';
 import { useTheme } from './tokens/theme';
 import { ChevronRight } from 'lucide-react';
 import { Animation } from './utils/animation';
-import { ExternalLink } from './utils/link';
+import { ExternalLink } from './utils/external-link';
 import { Flex, FlexAlignItems, FlexJustifyContent } from './utils/flex';
 import { Space } from './utils/space';
 
