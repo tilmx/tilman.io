@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { Breakpoint } from './tokens/breakpoint';
+import { Manrope as ManropeFont } from '@next/font/google'
 
 interface TextProps {
     size?: TextSize;
@@ -17,9 +18,12 @@ export enum TextSize {
     Small,
 }
 
+const Manrope = ManropeFont({
+    weight: '600',
+})
+
 const StyledText = styled.div<TextProps>`
-	font-family: Manrope, -apple-system, -system-ui, BlinkMacSystemFont, sans-serif; 
-	font-weight: 600;
+    ${Manrope.style};
     line-height: 1.4;
     ${props => props.center && 'text-align: center;'}
     color: ${props => props.color || props.theme.colors.text};
