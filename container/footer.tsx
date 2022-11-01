@@ -1,0 +1,25 @@
+import * as React from 'react';
+import { Text, TextSize } from '../components/text';
+import { Size, useTheme } from '../components/tokens';
+import { Center, Link, Space } from '../components/utils';
+
+export const Footer: React.FunctionComponent = () => {
+    const theme = useTheme();
+
+    return (
+        <>
+            <Space vertical={Size.XXL} />
+            {[
+                { label: "Site's notice", link: "https://tilman.io/sitesnotice.html" },
+                { label: "Privacy Policy", link: "https://tilman.io/privacypolicy.html" },
+            ].map((item, i) =>
+                <Center horizontal key={i}>
+                    <Link link={item.link}>
+                        <Text size={TextSize.Small} color={theme.colors.textVariant} center>{item.label}</Text>
+                    </Link>
+                </Center>
+            )}
+            <Space vertical={Size.L} />
+        </>
+    )
+}
