@@ -1,17 +1,14 @@
 import * as React from 'react';
-import styled from '@emotion/styled'
+import NextImage, { StaticImageData } from 'next/image'
 
-const StyledImage = styled.img`
-    display: block;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: ${props => props.theme.colors.text};
-`
+interface ImageProps {
+    image: StaticImageData;
+    alt: string;
+    style?: React.CSSProperties
+}
 
-export const Image: React.FunctionComponent<{ image: string; style?: React.CSSProperties }> = props => {
+export const Image: React.FunctionComponent<ImageProps> = props => {
     return (
-        <StyledImage src={props.image} style={props.style} />
+        <NextImage src={props.image} alt={props.alt} placeholder='blur' style={{ display: 'block', width: '100%', height: 'auto', margin: '0', padding: '0', border: 'none', ...props.style}} />
     )
 }

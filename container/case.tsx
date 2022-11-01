@@ -9,6 +9,7 @@ import { WidthLimiter } from '../components/width-limiter';
 import { Button } from '../components/button';
 import { Center } from '../components/utils/center';
 import { Image } from '../components/image';
+import { StaticImageData } from 'next/image';
 
 interface CaseProps {
 	topline: string;
@@ -17,7 +18,8 @@ interface CaseProps {
 	button: string;
 
 	link: string;
-	image: string;
+	image: StaticImageData;
+	imageAlt: string;
 	backgroundColor: string;
 
 	noNegativeMargin?: boolean;
@@ -43,7 +45,7 @@ export const Case: React.FunctionComponent<CaseProps> = props => {
 					<Button link={props.link} textColor={props.backgroundColor}>{props.button}</Button>
 				</Center>
 				<Space vertical={Size.XXXL} />
-				<Image image={props.image} style={{ borderRadius: '3px', boxShadow: '0 0 50px rgba(0, 0, 0, 0.3)' }} />
+				<Image image={props.image} alt={props.imageAlt} style={{ borderRadius: '3px', boxShadow: '0 0 50px rgba(0, 0, 0, 0.3)' }} />
 			</Wrapper>
 		</BackgroundColor>
 	)

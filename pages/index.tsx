@@ -13,6 +13,10 @@ import { Case } from '../container/case'
 import { BackgroundColor } from '../components/background-color'
 import { InternalLink } from '../components/utils/internal-link'
 
+import ImageTilman from '../public/images/tilman.jpg';
+import ImageCaseAlva from '../public/images/case-alva.png';
+import ImageCaseEd from '../public/images/case-ed.jpg';
+import ImageCaseEzb from '../public/images/case-ezb.png';
 
 export default function Home() {
 	const theme = useTheme();
@@ -33,7 +37,7 @@ export default function Home() {
 				</OffsetArea>
 				<Space vertical={Size.XXXXL} />
 
-				<Image image='./images/tilman.jpg' />
+				<Image image={ImageTilman} alt="Portrait of Tilman in front of shipping containers" />
 				<Space vertical={Size.XXXS} />
 				<Text size={TextSize.Small} color={theme.colors.textVariant} style={{ textAlign: 'right' }}>&copy; Foto: Jan Brinkmann</Text>
 				<Space vertical={Size.XXXXL} />
@@ -51,7 +55,8 @@ export default function Home() {
 				description='A radically new digital design tool built for cross-functional product teams. Alva lets you design interactive products based on the same components your engineers are using for production websites.'
 				button='Explore on GitHub'
 				link='https://github.com/meetalva'
-				image='./images/case-alva.png'
+				image={ImageCaseAlva}
+				imageAlt="Screenshot of Design Tool Alva"
 				backgroundColor='#E24772'
 			/>
 			<Case
@@ -60,7 +65,8 @@ export default function Home() {
 				description='Einzimmer Küche Bar is a minimalistic restaurant with focus on exceptional quality cuisine based in Nuremberg, Germany.'
 				button='Explore einzimmerkuechebar.de'
 				link='http://einzimmerkuechebar.de/'
-				image='./images/case-ezb.png'
+				image={ImageCaseEzb}
+				imageAlt="Screenshot of the Website of Einzimmer Küche Bar"
 				backgroundColor='#69757f'
 			/>
 			<Case
@@ -69,7 +75,8 @@ export default function Home() {
 				description='elbdudler is a social media agency based in Hamburg that works on creative concepts and integrated communication strategies.'
 				button='Explore elbdudler.de'
 				link='https://elbdudler.de/'
-				image='./images/case-ed.jpg'
+				image={ImageCaseEd}
+				imageAlt="Screenshot of the Website of elbdudler"
 				backgroundColor='#e5B4a6'
 			/>
 			<BackgroundColor color={theme.colors.background} style={{ marginTop: '-' + Size.XXL }}>
