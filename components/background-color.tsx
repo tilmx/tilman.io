@@ -5,9 +5,9 @@ const StyledBackgroundColor = styled.div`
     background-color: ${props => props.color};
 `
 
-export const BackgroundColor: React.FunctionComponent<{ color: string; children?: React.ReactNode }> = props => {
+export const BackgroundColor: React.FunctionComponent<{ color: string; children?: React.ReactNode; style?: React.CSSProperties }> = props => {
     return (
-        <StyledBackgroundColor color={props.color}>
+        <StyledBackgroundColor color={props.color} style={props.style}>
             {props.children}
         </StyledBackgroundColor>
     )

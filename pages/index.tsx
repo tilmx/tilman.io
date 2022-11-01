@@ -40,7 +40,7 @@ export default function Home() {
 				<OffsetArea>
 					<Text size={TextSize.Huge}>By focussing on simplicity and considering the smallest details, I create what empowers us all in our lifes — emotions.</Text>
 				</OffsetArea>
-				<Space vertical={Size.XXXXL} />
+				<Space vertical={Size.XXXXXL} />
 			</Wrapper>
 
 			<Case
@@ -70,7 +70,7 @@ export default function Home() {
 				image='images/case-ed.jpg'
 				backgroundColor='#e5B4a6'
 			/>
-			
+
 			<Space vertical={Size.XXXXXL} />
 			<Wrapper>
 				<WidthLimiter>

@@ -25,9 +25,9 @@ export const Case: React.FunctionComponent<CaseProps> = props => {
 	const theme = useTheme();
 
 	return (
-		<BackgroundColor color={props.backgroundColor}>
+		<BackgroundColor color={props.backgroundColor} style={{ marginTop: '-'+Size.XXL }}>
 			<Wrapper>
-				<Space vertical={Size.XXXXL} />
+				<Space vertical={Size.XXXXXL} />
 				<WidthLimiter>
 					<Text size={TextSize.Large} color={theme.colors.textVariant} center>{props.topline}</Text>
 					<Space vertical={Size.XXS} />
