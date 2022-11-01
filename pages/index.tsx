@@ -29,7 +29,7 @@ export default function Home() {
 					<Space vertical={Size.XXXL} />
 					<Text size={TextSize.Huge}>Tilman Frick is a digital designer and music producer currently based in Hamburg, Germany.</Text>
 					<Space vertical={Size.M} />
-					<Text size={TextSize.Large} color={theme.colors.textVariant}>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
+					<Text size={TextSize.Regular} color={theme.colors.textVariant}>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
 				</OffsetArea>
 				<Space vertical={Size.XXXXL} />
 

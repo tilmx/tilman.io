@@ -29,11 +29,11 @@ export const Case: React.FunctionComponent<CaseProps> = props => {
 			<Wrapper>
 				<Space vertical={Size.XXXXXL} />
 				<WidthLimiter>
-					<Text size={TextSize.Large} color={theme.colors.textVariant} center>{props.topline}</Text>
+					<Text size={TextSize.Regular} color={theme.colors.textVariant} center>{props.topline}</Text>
 					<Space vertical={Size.XXS} />
 					<Text size={TextSize.Huge} color={theme.colors.background} center>{props.title}</Text>
 					<Space vertical={Size.M} />
-					<Text size={TextSize.Large} color={theme.colors.background} center>{props.description}</Text>
+					<Text size={TextSize.Regular} color={theme.colors.background} center>{props.description}</Text>
 				</WidthLimiter>
 				<Space vertical={Size.XL} />
 				<Center horizontal>

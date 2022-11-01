@@ -13,6 +13,7 @@ interface TextProps {
 export enum TextSize {
     Huge,
     Large,
+    Regular,
     Small,
 }
 
@@ -34,6 +35,10 @@ const StyledText = styled.div<TextProps>`
     `}
 
     ${props => props.size === TextSize.Large && `
+        font-size: 25px;
+    `}
+
+    ${props => props.size === TextSize.Regular && `
         font-size: 20px;
     `}
 
@@ -44,7 +49,7 @@ const StyledText = styled.div<TextProps>`
 
 export const Text: React.FunctionComponent<TextProps> = props => {
     return (
-        <StyledText size={props.size || TextSize.Large} {...props} >
+        <StyledText size={props.size || TextSize.Regular} {...props} >
             {props.children}
         </StyledText>
     );

@@ -41,7 +41,7 @@ export const Banner: React.FunctionComponent<{ text: string; image: string; link
                         <Flex alignItems={FlexAlignItems.Center}>
                             <StyledServiceImage src={props.image} />
                             <Space horizontal={Size.XS} />
-                            <Text size={TextSize.Large}>{props.text}</Text>
+                            <Text size={TextSize.Regular}>{props.text}</Text>
                         </Flex>
                         <ChevronRight color={theme.colors.text} />
                     </Flex>

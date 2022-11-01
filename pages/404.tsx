@@ -26,11 +26,13 @@ export default function Error404() {
 					<Text size={TextSize.Huge}>Error 404. Mit Liebe verloren.</Text>
 					<Space vertical={Size.M} />
 					<Flex alignItems={FlexAlignItems.Center}>
-						<Text size={TextSize.Large} color={theme.colors.textVariant}>
+						<Text size={TextSize.Regular} color={theme.colors.textVariant}>
 							<InternalLink link='/'>Back to tilman.io</InternalLink>
 						</Text>
 						<ChevronRight color={theme.colors.textVariant} />
 					</Flex>
+					<Space vertical={Size.XXL} />
+					<Text size={TextSize.Small} color={theme.colors.textVariant}><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
 				</OffsetArea>
 				<Space vertical={Size.XXXXXL} />
 			</Wrapper>

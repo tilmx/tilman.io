@@ -11,7 +11,7 @@ import { InternalLink } from '../../components/utils/internal-link'
 import { ExternalLink } from '../../components/utils/external-link'
 import { ChevronRight } from 'lucide-react'
 
-export default function Error404() {
+export default function SitesNotice() {
     const theme = useTheme();
     return (
         <div>
@@ -35,15 +35,14 @@ export default function Error404() {
                         <Text>sayhello@tilman.io</Text>
                     </ExternalLink>
                     <Space vertical={Size.S} />
-
                     <Flex alignItems={FlexAlignItems.Center}>
-                        <Text size={TextSize.Large} color={theme.colors.textVariant}>
+                        <Text size={TextSize.Regular} color={theme.colors.textVariant}>
                             <InternalLink link='/'>Back to tilman.io</InternalLink>
                         </Text>
                         <ChevronRight color={theme.colors.textVariant} />
                     </Flex>
                     <Flex alignItems={FlexAlignItems.Center}>
-                        <Text size={TextSize.Large} color={theme.colors.textVariant}>
+                        <Text size={TextSize.Regular} color={theme.colors.textVariant}>
                             <InternalLink link='/legal/privacy-policy'>Privacy Policy</InternalLink>
                         </Text>
                         <ChevronRight color={theme.colors.textVariant} />
