@@ -31,7 +31,9 @@ export default function Home() {
 			</Head>
 			<Wrapper>
 				<Space vertical={Size.XL} />
-				<Logo />
+                <InternalLink link='/'>
+                    <Logo />
+                </InternalLink>
 				<OffsetArea>
 					<Space vertical={Size.XXXL} />
 					<Text size={TextSize.Huge}>Tilman Frick is a digital designer and music producer currently based in Hamburg, Germany.</Text>
