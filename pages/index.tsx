@@ -101,7 +101,8 @@ export default function Home() {
 				backgroundColor='#e5B4a6'
 			/>
 			<BackgroundColor color={theme.colors.background} style={{ marginTop: '-' + Size.XXL }}>
-				<Space vertical={Size.XXXXXL} />
+				<Space vertical={Size.XXXL} />
+				<Space vertical={Size.XXXL} />
 			</BackgroundColor>
 			<Wrapper>
 				<WidthLimiter>
