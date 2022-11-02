@@ -34,12 +34,12 @@ export const Case: React.FunctionComponent<CaseProps> = props => {
 			<Wrapper>
 				{!props.noNegativeMargin && <Space vertical={Size.XXL} />}
 				<Space vertical={Size.XXXXL} />
-				<WidthLimiter>
-					<Text size={TextSize.Regular} color={theme.colors.textVariant} center>{props.topline}</Text>
+				<WidthLimiter center>
+					<Text color={theme.colors.textVariant} center sansserif>{props.topline}</Text>
 					<Space vertical={Size.XXS} />
 					<Text size={TextSize.Huge} color={theme.colors.background} center>{props.title}</Text>
 					<Space vertical={Size.M} />
-					<Text size={TextSize.Regular} color={theme.colors.background} center>{props.description}</Text>
+					<Text color={theme.colors.background} center>{props.description}</Text>
 				</WidthLimiter>
 				<Space vertical={Size.XL} />
 				<Center horizontal>

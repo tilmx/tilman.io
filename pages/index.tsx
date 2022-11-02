@@ -12,7 +12,6 @@ import { Wrapper } from '../components/wrapper'
 import { Case } from '../container/case'
 import { BackgroundColor } from '../components/background-color'
 import { InternalLink } from '../components/utils/internal-link'
-
 import ImageTilman from '../public/images/tilman.jpg';
 import ImageCaseTom from '../public/images/case-tom.png';
 import ImageCaseAlva from '../public/images/case-alva.png';
@@ -31,22 +30,20 @@ export default function Home() {
 			</Head>
 			<Wrapper>
 				<Space vertical={Size.XL} />
-                <InternalLink link='/'>
-                    <Logo />
-                </InternalLink>
+				<InternalLink link='/'>
+					<Logo />
+				</InternalLink>
 				<OffsetArea>
 					<Space vertical={Size.XXXL} />
-					<Text size={TextSize.Huge}>Tilman Frick is a digital designer and music producer currently based in Hamburg, Germany.</Text>
+					<Text size={TextSize.Huge}>Tilman Frick is a <i>digital designer</i> and <i>music producer</i> currently based in Hamburg, Germany.</Text>
 					<Space vertical={Size.M} />
-					<Text size={TextSize.Regular} color={theme.colors.textVariant}>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
+					<WidthLimiter width="560px">
+						<Text size={TextSize.Regular} color={theme.colors.textVariant} sansserif>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
+						<Space vertical={Size.XXXL} />
+						<MusicTeaser />
+					</WidthLimiter>
+					<Space vertical={Size.XXXXXL} />
 				</OffsetArea>
-				<Space vertical={Size.XXXL} />
-
-				<WidthLimiter>
-					<MusicTeaser />
-				</WidthLimiter>
-				<Space vertical={Size.XXXL} />
-
 				<Image image={ImageTilman} alt="Portrait of Tilman in front of shipping containers" />
 				<Space vertical={Size.XXXS} />
 				<Text size={TextSize.SuperSmall} color={theme.colors.textVariant} style={{ textAlign: 'right' }}>&copy; Foto: Jan Brinkmann</Text>
@@ -105,8 +102,8 @@ export default function Home() {
 				<Space vertical={Size.XXXL} />
 			</BackgroundColor>
 			<Wrapper>
-				<WidthLimiter>
-					<Text color={theme.colors.textVariant} center>Get in touch</Text>
+				<WidthLimiter center>
+					<Text color={theme.colors.textVariant} center sansserif>Get in touch</Text>
 					<Space vertical={Size.M} />
 					<Text center>Tilman Frick</Text>
 					<Text center>(040) 42 104 550</Text>
