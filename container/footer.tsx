@@ -3,26 +3,19 @@ import { Text, TextSize } from '../components/text';
 import { Size } from '../components/tokens/size';
 import { useTheme } from '../components/tokens/theme';
 import { Space } from '../components/utils/space';
-import { ExternalLink } from '../components/utils/external-link';
-import { Center } from '../components/utils/center';
+import { InternalLink, WidthLimiter, Wrapper } from '../components';
 
 export const Footer: React.FunctionComponent = () => {
     const theme = useTheme();
 
     return (
-        <>
-            <Space vertical={Size.XXL} />
-            {[
-                { label: "Site's notice", link: "https://tilman.io/sitesnotice.html" },
-                { label: "Privacy Policy", link: "https://tilman.io/privacypolicy.html" },
-            ].map((item, i) =>
-                <Center horizontal key={i}>
-                    <ExternalLink link={item.link}>
-                        <Text size={TextSize.Small} color={theme.colors.textVariant} center>{item.label}</Text>
-                    </ExternalLink>
-                </Center>
-            )}
-            <Space vertical={Size.L} />
-        </>
+        <Wrapper>
+            <WidthLimiter>
+                <Space vertical={Size.XXL} />
+                <Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/sites-notice">Site's Notice</InternalLink></Text>
+                <Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/privacy-policy">Privacy Police</InternalLink></Text>
+                <Space vertical={Size.XXL} />
+            </WidthLimiter>
+        </Wrapper>
     )
 }

@@ -2,21 +2,11 @@ import * as React from 'react';
 import styled from '@emotion/styled'
 import { Size } from './tokens/size';
 import { Animation } from './utils/animation';
+import { Image } from './image';
+import { StaticImageData } from 'next/image';
 
 const StyledContainer = styled.div`
     display: relative;
-`
-
-const StyledImage = styled.img`
-    display: block;
-    width: 100%;
-    border-radius: ${Size.XXS};
-    margin: 0;
-    padding: 0;
-    border: none;
-    position: relative;
-    z-index: 1;
-    background-color: ${props => props.theme.colors.text};
 `
 
 const StyledShadow = styled.div<{ image: string }>`
@@ -32,12 +22,12 @@ const StyledShadow = styled.div<{ image: string }>`
     transform: translate3d(0,0,0);
 `
 
-export const Cover: React.FunctionComponent<{ image: string; }> = props => {
+export const Cover: React.FunctionComponent<{ image: StaticImageData; }> = props => {
     return (
         <Animation>
             <StyledContainer>
-                <StyledImage src={props.image} />
-                <StyledShadow image={props.image} />
+                <Image image={props.image} alt="Album Cover" style={{ position: 'relative', zIndex: 1, borderRadius: Size.XXS }} />
+                <StyledShadow image={props.image.src} />
             </StyledContainer>
         </Animation>
     )

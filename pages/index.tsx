@@ -18,6 +18,7 @@ import ImageCaseTom from '../public/images/case-tom.png';
 import ImageCaseAlva from '../public/images/case-alva.png';
 import ImageCaseEd from '../public/images/case-ed.jpg';
 import ImageCaseEzb from '../public/images/case-ezb.png';
+import { Footer } from '../container/footer'
 
 export default function Home() {
 	const theme = useTheme();
@@ -101,12 +102,9 @@ export default function Home() {
 					<Text center>Tilman Frick</Text>
 					<Text center>(040) 42 104 550</Text>
 					<Text center><ExternalLink link="mailto:sayhello@tilman.io">sayhello@tilman.io</ExternalLink></Text>
-					<Space vertical={Size.XXL} />
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/sites-notice">Site's Notice</InternalLink></Text>
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/privacy-policy">Privacy Police</InternalLink></Text>
-					<Space vertical={Size.XXL} />
-				</WidthLimiter>
-			</Wrapper>
+					</WidthLimiter>
+					</Wrapper>
+					<Footer />
 		</div>
 	)
 }

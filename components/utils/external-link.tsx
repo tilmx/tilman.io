@@ -6,7 +6,7 @@ const StyledLink = styled.a`
     text-decoration: inherit;
 `;
 
-export const ExternalLink: React.FunctionComponent<{ link: string; children?: React.ReactNode; }> = props => {
+export const ExternalLink: React.FunctionComponent<{ link?: string; children?: React.ReactNode; }> = props => {
     return (
         <StyledLink href={props.link} target="_blank">
             {props.children}
