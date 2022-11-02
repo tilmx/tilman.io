@@ -9,17 +9,14 @@ const StyledContainer = styled.div`
     display: relative;
 `
 
-const StyledShadow = styled.div<{ image: string }>`
+const StyledShadow = styled.div`
     width: 100%;
     height: ${Size.S};
     border-radius: 50%;
     margin-top: -${Size.XXS};
-    background-color: ${props => props.theme.colors.text};
-    background-image: url("${props => props.image}");
-    background-position: bottom;
-    background-size: cover;
     filter: blur(12px);
     transform: translate3d(0,0,0);
+    overflow: hidden;
 `
 
 export const Cover: React.FunctionComponent<{ image: StaticImageData; }> = props => {
@@ -27,7 +24,9 @@ export const Cover: React.FunctionComponent<{ image: StaticImageData; }> = props
         <Animation>
             <StyledContainer>
                 <Image image={props.image} alt="Album Cover" style={{ position: 'relative', zIndex: 1, borderRadius: Size.XXS }} />
-                <StyledShadow image={props.image.src} />
+                <StyledShadow>
+                    <Image image={props.image} alt="Album Cover Shadow" style={{ position: 'absolute', bottom: 0 }} />
+                </StyledShadow>
             </StyledContainer>
         </Animation>
     )
