@@ -27,6 +27,7 @@ const FontSerif = Lora({ weight: '500', style: ['normal', 'italic'], subsets: [ 
 const FontSans = Inter({ weight: '500', subsets: [ 'latin' ] })
 
 const StyledText = styled.div<TextProps>`
+    ${props => props.sansserif ? FontSans.style : FontSerif.style}
     line-height: 1.4;
     ${props => props.center && 'text-align: center;'}
     color: ${props => props.color || Color.Text};
@@ -82,7 +83,7 @@ const StyledText = styled.div<TextProps>`
 
 export const Text: React.FunctionComponent<TextProps> = props => {
     return (
-        <StyledText size={props.size || TextSize.Regular} {...props} className={props.sansserif ? FontSans.className : FontSerif.className}>
+        <StyledText size={props.size || TextSize.Regular} {...props}>
             {props.children}
         </StyledText>
     );
