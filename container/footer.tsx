@@ -12,7 +12,7 @@ export const Footer: React.FunctionComponent = () => {
         <Wrapper>
             <WidthLimiter center>
                 <Space vertical={Size.XXL} />
-                <Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center sansserif>
+                <Text size={TextSize.SuperSmall} color={theme.colors.textLight} center sansserif>
                     <InternalLink link="/legal/sites-notice">Site's Notice</InternalLink> — <InternalLink link="/legal/privacy-policy">Privacy Policy</InternalLink>
                 </Text>
                 <Space vertical={Size.XXL} />

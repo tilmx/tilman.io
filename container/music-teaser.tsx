@@ -26,7 +26,7 @@ export const MusicTeaser: React.FunctionComponent = () => {
     return (
         <>
             {latestRelease &&
-                <InternalLink link={'./music/' + latestRelease.id}>
+                <InternalLink link={'./music/' + latestRelease.id} noHighlighting>
                     <Animation>
                         <StyledTeaser>
                             <Wrapper>

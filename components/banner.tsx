@@ -16,8 +16,9 @@ const StyledContainer = styled.div`
     border-radius: ${Size.XXS};
     transition: background .1s;
     cursor: pointer;
+    text-decoration: none;
 
-    &:active {
+    &:active, &:hover {
         background: ${props => props.theme.colors.backgroundVariant};
     }
 `
@@ -35,13 +36,13 @@ export const Banner: React.FunctionComponent<{ text: string; image: string; alt:
 
     return (
         <Animation>
-            <ExternalLink link={props.link}>
+            <ExternalLink link={props.link} noHighlighting>
                 <StyledContainer>
                     <Flex alignItems={FlexAlignItems.Center} justifyContent={FlexJustifyContent.SpaceBetween}>
                         <Flex alignItems={FlexAlignItems.Center}>
                             <StyledServiceImage src={props.image} alt={props.alt} />
                             <Space horizontal={Size.XS} />
-                            <Text size={TextSize.Regular} sansserif>{props.text}</Text>
+                            <Text size={TextSize.Regular} sansserif style={{ textDecoration: 'none' }}>{props.text}</Text>
                         </Flex>
                         <ChevronRight color={theme.colors.text} />
                     </Flex>
