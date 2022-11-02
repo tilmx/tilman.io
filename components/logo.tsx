@@ -1,13 +1,19 @@
 import * as React from 'react';
 import styled from '@emotion/styled'
-import { Color, Size } from './tokens';
+import { Breakpoint, Color, Size } from './tokens';
 
 const StyledLogoWrapper = styled.div`
 	width: 40px;
 	height: 40px;
+
 	position: absolute;
 	left: ${Size.L};
 	top: ${Size.L};
+
+	${Breakpoint.Mobile} {
+		left: ${Size.M};
+		top: ${Size.M};
+	}
 
 	&:hover {
 		> div {
