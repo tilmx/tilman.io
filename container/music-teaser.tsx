@@ -11,6 +11,12 @@ import { ChevronRight } from 'lucide-react';
 const StyledTeaser = styled.div`
     background-color: ${props => props.theme.colors.text};
     border-radius: ${Size.S};
+    transition: background-color .2s, transform .2s;
+
+    &:hover {
+        background-color: ${props => props.theme.colors.accent};
+        transform: scale(1.05);
+    } 
 `
 
 export const MusicTeaser: React.FunctionComponent = () => {

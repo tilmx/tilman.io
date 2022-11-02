@@ -9,26 +9,28 @@ interface ButtonProps {
     link?: string;
 }
 
-const StyledWrapper = styled.a`
+const StyledButton = styled.a<{ textColor?: string }>`
     display: inline-block;
     background-color: ${props => props.theme.colors.background};
-    color: @black;
+    color: ${props => props.textColor};
     text-decoration: none;
     padding: ${Size.S} ${Size.L};
     border-radius: ${Size.XXS};
-    transition: opacity 0.2s;
+    transition: background-color .2s, transform .2s, color .2s;
 
     &:hover {
-        opacity: 0.9;
-    }
+        background-color: ${props => props.theme.colors.textVariant};
+        color: ${props => props.theme.colors.background};
+        transform: scale(1.05);
+    } 
 `
 
 export const Button: React.FunctionComponent<ButtonProps> = props => {
     return (
-        <StyledWrapper href={props.link} target='_blank'>
-            <Text color={props.textColor} sansserif>
+        <StyledButton href={props.link} target='_blank' textColor={props.textColor}>
+            <Text color="inherit" sansserif>
                 {props.children}
             </Text>
-        </StyledWrapper>
+        </StyledButton>
     )
 }

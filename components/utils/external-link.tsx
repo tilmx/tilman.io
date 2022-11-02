@@ -4,9 +4,11 @@ import styled from '@emotion/styled';
 const StyledLink = styled.a`
 	color: inherit;
     text-decoration: inherit;
+    transition: color .2s;
 
     &:hover {
         color: ${props => props.theme.colors.accent};
+        text-decoration: underline;
     }
 `;
 

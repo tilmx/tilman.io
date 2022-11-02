@@ -51,6 +51,7 @@ const StyledText = styled.div<TextProps>`
     ${props => props.size === TextSize.Large && `
         font-size: 36px;
         line-height: 1.3;
+        text-underline-offset: 3px;
 
         ${Breakpoint.Tablet} {
             font-size: 24px;
@@ -59,6 +60,7 @@ const StyledText = styled.div<TextProps>`
 
     ${props => props.size === TextSize.Regular && `
         font-size: 20px;
+        text-underline-offset: 5px;
     `}
 
     ${props => props.size === TextSize.Small && `
@@ -67,6 +69,7 @@ const StyledText = styled.div<TextProps>`
 
     ${props => props.size === TextSize.SuperSmall && `
         font-size: 13px;
+        text-underline-offset: 3px;
     `}
 
     ${props => props.indent && `

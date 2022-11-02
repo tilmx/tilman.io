@@ -34,10 +34,10 @@ export default function Home() {
 				</InternalLink>
 				<OffsetArea>
 					<Space vertical={Size.XXXL} />
-					<Space vertical={Size.XXXXL} />
+					<Space vertical={Size.XXXL} />
 					<Text size={TextSize.Huge} indent>Tilman Frick is a <i>digital designer 🎨</i> and <i>music producer 🎷</i> currently based in Hamburg 🍔, Germany.</Text>
 					<Space vertical={Size.XXL} />
-						<Text size={TextSize.Large}>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
+						<Text size={TextSize.Large}>Working at <ExternalLink link='https://tomorrow.one'><i style={{ textDecoration: 'underline' }}>Tomorrow</i></ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
 						<Space vertical={Size.XXXL} />
 					<WidthLimiter width="560px">
 						<MusicTeaser />
@@ -106,7 +106,7 @@ export default function Home() {
 					<Text color={theme.colors.textVariant} center sansserif>Get in touch</Text>
 					<Space vertical={Size.M} />
 					<Text center>Tilman Frick</Text>
-					<Text center>(040) 42 104 550</Text>
+					<Text center><ExternalLink link="tel:+49 40 42 104 550">(040) 42 104 550</ExternalLink></Text>
 					<Text center><ExternalLink link="mailto:sayhello@tilman.io">sayhello@tilman.io</ExternalLink></Text>
 				</WidthLimiter>
 			</Wrapper>
