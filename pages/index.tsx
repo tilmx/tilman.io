@@ -58,7 +58,7 @@ export default function Home() {
 				noNegativeMargin
 				topline='Lead Product Designer'
 				title='Tomorrow'
-				description='The company is the first European stakeholder to combine mobile banking and sustainable finances. Since March 2019, the social business from Hamburg has been offering its current account and already has over 120,000 customers. Its long-term aim is to create a digital platform focused on finances with a positive impact.'
+				description='Tomorrow is the first European company to combine mobile banking and sustainable finances. Since March 2019, the social business from Hamburg already has over 120,000 customers and currently is the best rated finance app in Germany.'
 				button='Explore tomorrow.one'
 				link='https://tomorrow.one'
 				image={ImageCaseTom}
