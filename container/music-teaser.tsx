@@ -26,10 +26,10 @@ export const MusicTeaser: React.FunctionComponent = () => {
                                 <Space vertical={Size.L} />
                                 <Flex justifyContent={FlexJustifyContent.SpaceBetween} alignItems={FlexAlignItems.Center}>
                                     <Flex alignItems={FlexAlignItems.Center}>
-                                        <div style={{ maxWidth: '120px' }}>
+                                        <div style={{ width: '120px', flexShrink: .4 }}>
                                             <Cover image={latestRelease?.image} />
                                         </div>
-                                        <Space horizontal={Size.L} />
+                                        <Space horizontal={Size.M} />
                                         <div>
                                             <Text color={theme.colors.background}>Listen to the Tilman Frick's new single "{latestRelease.title}"</Text>
                                             <Space vertical={Size.XXS} />
@@ -37,6 +37,7 @@ export const MusicTeaser: React.FunctionComponent = () => {
                                             <Space vertical={Size.XS} />
                                         </div>
                                     </Flex>
+                                        <Space horizontal={Size.XXS} />
                                     <div>
                                         <ChevronRight color={theme.colors.background} />
                                         <Space vertical={Size.XS} />
