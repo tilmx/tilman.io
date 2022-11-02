@@ -11,16 +11,20 @@ const StyledLogoWrapper = styled.div`
 
 	&:hover {
 		> div {
+			background-color: ${props => props.theme.colors.accent};
 			-moz-animation: logohorizontal 0.5s;
 			-webkit-animation: logohorizontal 0.5s;
 			animation: logohorizontal 0.5s;
 		}
 		> div:first-child {
+			background-color: inherit;
+			border-color: ${props => props.theme.colors.accent};
 			-moz-animation: logoborder 0.5s;
 			-webkit-animation: logoborder 0.5s;
 			animation: logoborder 0.5s;
 		}
 		> div:last-child {
+			background-color: ${props => props.theme.colors.accent};
 			-moz-animation: logovertical 0.5s;
 			-webkit-animation: logovertical 0.5s;
 			animation: logovertical 0.5s;
@@ -77,6 +81,7 @@ const StyledLogoOutline = styled.div`
 	border: 4px solid ${props => props.theme.colors.text};
 	border-radius: 50%;
 	box-sizing: border-box;
+	transition: border-color .2s;
 `
 const StyledLogoHorizontal = styled.div`
 	position: absolute;
@@ -85,6 +90,7 @@ const StyledLogoHorizontal = styled.div`
 	top: 12px;
 	left: 12px;
 	background-color: ${props => props.theme.colors.text};
+	transition: background-color .2s;
 `
 
 const StyledLogoVertical = styled.div`
@@ -94,6 +100,7 @@ const StyledLogoVertical = styled.div`
 	top: 14px;
 	left: 18px;
 	background-color: ${props => props.theme.colors.text};
+	transition: background-color .2s;
 `
 
 export const Logo: React.FunctionComponent = () => {
