@@ -17,7 +17,7 @@ export default function Dimensions() {
       <Head>
         <title>{content ? `Tilman Frick — ${content.title}` : 'Tilman Frick'}</title>
       </Head>
-      {content ?
+      {content &&
         <>
           <Wrapper>
             <WidthLimiter width={Size.XXXXXL}>
@@ -46,8 +46,6 @@ export default function Dimensions() {
           </Wrapper>
           <Footer />
         </>
-        :
-        <Text center>Sorry, we couldn't find that music.</Text>
       }
     </>
   )
