@@ -4,6 +4,10 @@ import styled from '@emotion/styled';
 const StyledLink = styled.a`
 	color: inherit;
     text-decoration: inherit;
+
+    &:hover {
+        color: ${props => props.theme.colors.accent};
+    }
 `;
 
 export const ExternalLink: React.FunctionComponent<{ link?: string; children?: React.ReactNode; }> = props => {

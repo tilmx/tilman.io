@@ -19,6 +19,7 @@ import ImageCaseAlva from '../public/images/case-alva.png';
 import ImageCaseEd from '../public/images/case-ed.jpg';
 import ImageCaseEzb from '../public/images/case-ezb.png';
 import { Footer } from '../container/footer'
+import { MusicTeaser } from '../container/music-teaser'
 
 export default function Home() {
 	const theme = useTheme();
@@ -37,7 +38,12 @@ export default function Home() {
 					<Space vertical={Size.M} />
 					<Text size={TextSize.Regular} color={theme.colors.textVariant}>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
 				</OffsetArea>
-				<Space vertical={Size.XXXXL} />
+				<Space vertical={Size.XXXL} />
+
+				<WidthLimiter>
+					<MusicTeaser />
+				</WidthLimiter>
+				<Space vertical={Size.XXXL} />
 
 				<Image image={ImageTilman} alt="Portrait of Tilman in front of shipping containers" />
 				<Space vertical={Size.XXXS} />
