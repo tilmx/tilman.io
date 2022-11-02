@@ -9,6 +9,6 @@ interface ImageProps {
 
 export const Image: React.FunctionComponent<ImageProps> = props => {
     return (
-        <NextImage src={props.image} alt={props.alt} placeholder='blur' style={{ display: 'block', width: '100%', height: 'auto', margin: '0', padding: '0', border: 'none', ...props.style}} />
+        <NextImage src={props.image} sizes="100vw" alt={props.alt} placeholder='blur' style={{ display: 'block', width: '100%', height: 'auto', margin: '0', padding: '0', border: 'none', ...props.style}} />
     )
 }
