@@ -41,7 +41,7 @@ export default function Home() {
 
 				<Image image={ImageTilman} alt="Portrait of Tilman in front of shipping containers" />
 				<Space vertical={Size.XXXS} />
-				<Text size={TextSize.Small} color={theme.colors.textVariant} style={{ textAlign: 'right' }}>&copy; Foto: Jan Brinkmann</Text>
+				<Text size={TextSize.SuperSmall} color={theme.colors.textVariant} style={{ textAlign: 'right' }}>&copy; Foto: Jan Brinkmann</Text>
 				<Space vertical={Size.XXXXL} />
 
 				<OffsetArea>
@@ -102,9 +102,9 @@ export default function Home() {
 					<Text center>Tilman Frick</Text>
 					<Text center>(040) 42 104 550</Text>
 					<Text center><ExternalLink link="mailto:sayhello@tilman.io">sayhello@tilman.io</ExternalLink></Text>
-					</WidthLimiter>
-					</Wrapper>
-					<Footer />
+				</WidthLimiter>
+			</Wrapper>
+			<Footer />
 		</div>
 	)
 }

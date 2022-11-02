@@ -26,7 +26,7 @@ export default function Dimensions() {
                 <Cover image={content.image} />
               </ExternalLink>
               <Space vertical={Size.L} />
-              <Text size={TextSize.Regular} color={theme.colors.textVariant}>Open the single on …</Text>
+              <Text size={TextSize.Small} color={theme.colors.textVariant}>Open the single on …</Text>
               <Space vertical={Size.XXXS} />
               {content.links.spotify && <Banner text="Spotify" link={content.links.spotify} image="/images/music/service/spotify.svg" />}
               {content.links.appleMusic && <Banner text="Apple Music" link={content.links.appleMusic} image="/images/music/service/apple-music.svg" />}

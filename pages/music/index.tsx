@@ -15,7 +15,7 @@ export default function Home() {
 
           <Text size={TextSize.Large} center>Tilman Frick</Text>
           <Space vertical={Size.XXXS} />
-          <Text size={TextSize.Small} color={theme.colors.textVariant} center>All releases</Text>
+          <Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center>All releases</Text>
           <Space vertical={Size.L} />
           {Releases.map(release =>
             <Fragment key={release.id}>

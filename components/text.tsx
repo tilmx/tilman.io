@@ -16,6 +16,7 @@ export enum TextSize {
     Large,
     Regular,
     Small,
+    SuperSmall,
 }
 
 const Manrope = ManropeFont({
@@ -47,6 +48,10 @@ const StyledText = styled.div<TextProps>`
     `}
 
     ${props => props.size === TextSize.Small && `
+        font-size: 16px;
+    `}
+
+    ${props => props.size === TextSize.SuperSmall && `
         font-size: 12px;
     `}
 `;

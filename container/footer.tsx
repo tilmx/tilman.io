@@ -12,8 +12,8 @@ export const Footer: React.FunctionComponent = () => {
         <Wrapper>
             <WidthLimiter>
                 <Space vertical={Size.XXL} />
-                <Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/sites-notice">Site's Notice</InternalLink></Text>
-                <Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="./legal/privacy-policy">Privacy Police</InternalLink></Text>
+                <Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center><InternalLink link="./legal/sites-notice">Site's Notice</InternalLink></Text>
+                <Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center><InternalLink link="./legal/privacy-policy">Privacy Police</InternalLink></Text>
                 <Space vertical={Size.XXL} />
             </WidthLimiter>
         </Wrapper>

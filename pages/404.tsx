@@ -32,8 +32,8 @@ export default function Error404() {
 						<ChevronRight color={theme.colors.textVariant} />
 					</Flex>
 					<Space vertical={Size.XXL} />
-					<Text size={TextSize.Small} color={theme.colors.textVariant}><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
-					<Text size={TextSize.Small} color={theme.colors.textVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
+					<Text size={TextSize.SuperSmall} color={theme.colors.textVariant}><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
+					<Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
 				</OffsetArea>
 				<Space vertical={Size.XXXXXL} />
 			</Wrapper>
