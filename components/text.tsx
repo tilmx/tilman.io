@@ -24,10 +24,9 @@ export enum TextSize {
 }
 
 const FontSerif = Lora({ weight: '500', style: ['normal', 'italic'] })
-const FontSansSerif = Inter({ weight: '500' })
+const FontSans = Inter({ weight: '500' })
 
 const StyledText = styled.div<TextProps>`
-    ${props => props.sansserif ? FontSansSerif.style : FontSerif.style};
     line-height: 1.4;
     ${props => props.center && 'text-align: center;'}
     color: ${props => props.color || Color.Text};
@@ -83,7 +82,7 @@ const StyledText = styled.div<TextProps>`
 
 export const Text: React.FunctionComponent<TextProps> = props => {
     return (
-        <StyledText size={props.size || TextSize.Regular} {...props} >
+        <StyledText size={props.size || TextSize.Regular} {...props} className={props.sansserif ? FontSans.className : FontSerif.className}>
             {props.children}
         </StyledText>
     );
