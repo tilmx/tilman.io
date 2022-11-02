@@ -20,12 +20,11 @@ export default function SitesNotice() {
                 <meta name="robots" content="noindex" />
             </Head>
             <Wrapper>
-                <Space vertical={Size.XL} />
                 <InternalLink link='/'>
                     <Logo />
                 </InternalLink>
                 <OffsetArea>
-                    <Space vertical={Size.XXXL} />
+                    <Space vertical={Size.XXXXL} />
                     <Text size={TextSize.Huge}>Site's notice</Text>
                     <Space vertical={Size.M} />
                     <Text>Tilman Frick</Text>

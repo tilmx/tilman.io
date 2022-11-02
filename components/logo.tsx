@@ -1,10 +1,13 @@
 import * as React from 'react';
 import styled from '@emotion/styled'
+import { Size } from './tokens';
 
 const StyledLogoWrapper = styled.div`
 	width: 40px;
 	height: 40px;
-	position: relative;
+	position: absolute;
+	left: ${Size.L};
+	top: ${Size.L};
 
 	&:hover {
 		> div {

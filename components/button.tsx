@@ -14,7 +14,7 @@ const StyledWrapper = styled.a`
     background-color: ${props => props.theme.colors.background};
     color: @black;
     text-decoration: none;
-    padding: ${Size.S} ${Size.M};
+    padding: ${Size.S} ${Size.L};
     border-radius: ${Size.XXS};
     transition: opacity 0.2s;
 

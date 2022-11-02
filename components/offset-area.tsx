@@ -3,9 +3,8 @@ import styled from '@emotion/styled'
 import { Breakpoint } from './tokens/breakpoint';
 
 const StyledWrapper = styled.div`
-	margin-left: 30%;
-	width: 60%;
-	max-width: 720px;
+	margin-left: 35%;
+	width: 55%;
 
 	${Breakpoint.Tablet} {
 		margin-left: 20%;

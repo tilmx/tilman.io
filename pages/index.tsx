@@ -29,28 +29,28 @@ export default function Home() {
 				<meta name="description" content="Tilman Frick is a digital designer currently based in Hamburg, Germany. Working at Tomorrow, but available for selected freelance projects." />
 			</Head>
 			<Wrapper>
-				<Space vertical={Size.XL} />
 				<InternalLink link='/'>
 					<Logo />
 				</InternalLink>
 				<OffsetArea>
 					<Space vertical={Size.XXXL} />
-					<Text size={TextSize.Huge}>Tilman Frick is a <i>digital designer</i> and <i>music producer</i> currently based in Hamburg, Germany.</Text>
-					<Space vertical={Size.M} />
-					<WidthLimiter width="560px">
-						<Text size={TextSize.Regular} color={theme.colors.textVariant} sansserif>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
+					<Space vertical={Size.XXXXL} />
+					<Text size={TextSize.Huge} indent>Tilman Frick is a <i>digital designer 🎨</i> and <i>music producer 🎷</i> currently based in Hamburg 🍔, Germany.</Text>
+					<Space vertical={Size.XXL} />
+						<Text size={TextSize.Large}>Working at <ExternalLink link='https://tomorrow.one'>Tomorrow</ExternalLink>, the first European company to combine mobile banking and sustainable finances. Available for selected freelance projects.</Text>
 						<Space vertical={Size.XXXL} />
+					<WidthLimiter width="560px">
 						<MusicTeaser />
 					</WidthLimiter>
 					<Space vertical={Size.XXXXXL} />
 				</OffsetArea>
 				<Image image={ImageTilman} alt="Portrait of Tilman in front of shipping containers" />
 				<Space vertical={Size.XXXS} />
-				<Text size={TextSize.SuperSmall} color={theme.colors.textVariant} style={{ textAlign: 'right' }}>&copy; Foto: Jan Brinkmann</Text>
-				<Space vertical={Size.XXXXL} />
+				<Text size={TextSize.SuperSmall} color={theme.colors.textVariant} style={{ textAlign: 'right' }} sansserif>&copy; Foto: Jan Brinkmann</Text>
+				<Space vertical={Size.XXXXXL} />
 
 				<OffsetArea>
-					<Text size={TextSize.Huge}>By focussing on simplicity and considering the smallest details, I create what empowers us all in our lifes — emotions.</Text>
+					<Text size={TextSize.Huge} indent>By focussing on <i>simplicity</i> and considering the <i>smallest details</i>, I create what empowers us all in our lifes — emotions.</Text>
 				</OffsetArea>
 				<Space vertical={Size.XXXXXL} />
 			</Wrapper>

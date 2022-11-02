@@ -19,12 +19,11 @@ export default function Error404() {
 				<title>Site not found</title>
 			</Head>
 			<Wrapper>
-				<Space vertical={Size.XL} />
 				<InternalLink link='/'>
 					<Logo />
 				</InternalLink>
 				<OffsetArea>
-					<Space vertical={Size.XXXL} />
+					<Space vertical={Size.XXXXL} />
 					<Text size={TextSize.Huge}>Error 404. Mit Liebe verloren.</Text>
 					<Space vertical={Size.M} />
 					<Flex alignItems={FlexAlignItems.Center}>
