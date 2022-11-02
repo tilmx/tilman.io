@@ -21,7 +21,7 @@ const StyledShadow = styled.div`
 
 export const Cover: React.FunctionComponent<{ image: StaticImageData; }> = props => {
     return (
-        <Animation>
+        <Animation indicateHover>
             <StyledContainer>
                 <Image image={props.image} alt="Album Cover" style={{ position: 'relative', zIndex: 1, borderRadius: Size.XXS }} />
                 <StyledShadow>

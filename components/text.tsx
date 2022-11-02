@@ -23,7 +23,7 @@ export enum TextSize {
     SuperSmall,
 }
 
-const FontSerif = Lora({ style: ['normal', 'italic'] })
+const FontSerif = Lora({ weight: '500', style: ['normal', 'italic'] })
 const FontSansSerif = Inter({ weight: '500' })
 
 const StyledText = styled.div<TextProps>`
@@ -32,7 +32,7 @@ const StyledText = styled.div<TextProps>`
     ${props => props.center && 'text-align: center;'}
     color: ${props => props.color || props.theme.colors.text};
     margin: 0;
-    font-weight: ${props => props.sansserif ? '500' : '500'};
+    font-weight: 500;
 	cursor: inherit;
 
     ${props => props.size === TextSize.Huge && `

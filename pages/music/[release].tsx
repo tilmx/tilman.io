@@ -20,13 +20,13 @@ export default function Dimensions() {
       {content &&
         <>
           <Wrapper>
-            <WidthLimiter width={Size.XXXXXL}>
+            <WidthLimiter width={Size.XXXXXL} center>
               <Space vertical={Size.XXL} />
               <ExternalLink link={content.links.spotify}>
                 <Cover image={content.image} />
               </ExternalLink>
               <Space vertical={Size.L} />
-              <Text size={TextSize.Small} color={theme.colors.textVariant}>Open the single on …</Text>
+              <Text size={TextSize.Small} color={theme.colors.textVariant} sansserif>Open the single on …</Text>
               <Space vertical={Size.XXXS} />
               {content.links.spotify && <Banner text="Spotify" alt="Spotify Logo" link={content.links.spotify} image="/images/music/service/spotify.svg" />}
               {content.links.appleMusic && <Banner text="Apple Music" alt="Apple Music Logo" link={content.links.appleMusic} image="/images/music/service/apple-music.svg" />}
