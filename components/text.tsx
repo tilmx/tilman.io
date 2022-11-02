@@ -51,7 +51,7 @@ const StyledText = styled.div<TextProps>`
     ${props => props.size === TextSize.Large && `
         font-size: 36px;
         line-height: 1.3;
-        text-underline-offset: 3px;
+        text-underline-offset: 5px;
 
         ${Breakpoint.Tablet} {
             font-size: 24px;

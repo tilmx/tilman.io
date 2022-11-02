@@ -12,6 +12,7 @@ const StyledTeaser = styled.div`
     background-color: ${props => props.theme.colors.text};
     border-radius: ${Size.S};
     transition: background-color .2s, transform .2s;
+    text-decoration: none;
 
     &:hover {
         background-color: ${props => props.theme.colors.accent};
