@@ -1,7 +1,7 @@
 import { css, Global } from '@emotion/react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Theme } from '../components/tokens/colors';
+import { Color, Theme } from '../components/tokens/colors';
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -12,7 +12,7 @@ function App({ Component, pageProps }: AppProps) {
         <meta name="language" content="en" />
         <meta name="referrer" content="no-referrer" />
       </Head>
-      <Global styles={css`body { margin: 0 };`} />
+      <Global styles={css`body { margin: 0; background: ${Color.Background}; };`} />
       <Component {...pageProps} />
     </Theme>
   );
