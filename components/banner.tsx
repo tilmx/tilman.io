@@ -2,12 +2,12 @@ import * as React from 'react';
 import styled from '@emotion/styled'
 import { Text, TextSize } from './text';
 import { Size } from './tokens/size';
-import { useTheme } from './tokens/theme';
 import { ChevronRight } from 'lucide-react';
 import { Animation } from './utils/animation';
 import { ExternalLink } from './utils/external-link';
 import { Flex, FlexAlignItems, FlexJustifyContent } from './utils/flex';
 import { Space } from './utils/space';
+import { Color } from './tokens';
 
 const StyledContainer = styled.div`
     display: relative;
@@ -19,7 +19,7 @@ const StyledContainer = styled.div`
     text-decoration: none;
 
     &:active, &:hover {
-        background: ${props => props.theme.colors.backgroundVariant};
+        background: ${Color.BackgroundVariant};
     }
 `
 
@@ -32,8 +32,6 @@ const StyledServiceImage = styled.img`
 `
 
 export const Banner: React.FunctionComponent<{ text: string; image: string; alt: string; link: string; }> = props => {
-    const theme = useTheme();
-
     return (
         <Animation>
             <ExternalLink link={props.link} noHighlighting>
@@ -44,7 +42,7 @@ export const Banner: React.FunctionComponent<{ text: string; image: string; alt:
                             <Space horizontal={Size.XS} />
                             <Text size={TextSize.Regular} sansserif style={{ textDecoration: 'none' }}>{props.text}</Text>
                         </Flex>
-                        <ChevronRight color={theme.colors.text} />
+                        <ChevronRight color={Color.Text} />
                     </Flex>
                 </StyledContainer>
             </ExternalLink>

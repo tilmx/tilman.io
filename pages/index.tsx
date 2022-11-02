@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react'
 import Head from 'next/head'
 import { Image } from '../components/image'
 import { Logo } from '../components/logo'
@@ -19,9 +18,9 @@ import ImageCaseEd from '../public/images/case-ed.jpg';
 import ImageCaseEzb from '../public/images/case-ezb.png';
 import { Footer } from '../container/footer'
 import { MusicTeaser } from '../container/music-teaser'
+import { Color } from '../components'
 
 export default function Home() {
-	const theme = useTheme();
 	return (
 		<div>
 			<Head>
@@ -46,7 +45,7 @@ export default function Home() {
 				</OffsetArea>
 				<Image image={ImageTilman} alt="Portrait of Tilman in front of shipping containers" />
 				<Space vertical={Size.XXXS} />
-				<Text size={TextSize.SuperSmall} color={theme.colors.textVariant} style={{ textAlign: 'right' }} sansserif>&copy; Foto: Jan Brinkmann</Text>
+				<Text size={TextSize.SuperSmall} color={Color.TextVariant} style={{ textAlign: 'right' }} sansserif>&copy; Foto: Jan Brinkmann</Text>
 				<Space vertical={Size.XXXXXL} />
 
 				<OffsetArea>
@@ -97,13 +96,13 @@ export default function Home() {
 				imageAlt="Screenshot of the Website of elbdudler"
 				backgroundColor='#e5B4a6'
 			/>
-			<BackgroundColor color={theme.colors.background} style={{ marginTop: '-' + Size.XXL }}>
+			<BackgroundColor color={Color.Background} style={{ marginTop: '-' + Size.XXL }}>
 				<Space vertical={Size.XXXL} />
 				<Space vertical={Size.XXXL} />
 			</BackgroundColor>
 			<Wrapper>
 				<WidthLimiter center>
-					<Text color={theme.colors.textVariant} center sansserif>Get in touch</Text>
+					<Text color={Color.TextVariant} center sansserif>Get in touch</Text>
 					<Space vertical={Size.M} />
 					<Text center>Tilman Frick</Text>
 					<Text center><ExternalLink link="tel:+49 40 42 104 550">(040) 42 104 550</ExternalLink></Text>

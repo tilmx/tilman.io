@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
+import { Color } from '../tokens/colors';
 
 const StyledLink = styled.a<{ noHighlighting?: boolean }>`
 	color: inherit;
@@ -8,7 +9,7 @@ const StyledLink = styled.a<{ noHighlighting?: boolean }>`
 
     ${props => !props.noHighlighting && `
         &:hover {
-            color: ${props.theme.colors.accent};
+            color: ${Color.Accent};
             text-decoration: underline;
         }
     `}

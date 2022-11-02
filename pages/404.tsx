@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react'
 import Head from 'next/head'
 import { Logo } from '../components/logo'
 import { OffsetArea } from '../components/offset-area'
@@ -9,10 +8,9 @@ import { Wrapper } from '../components/wrapper'
 import { Flex, FlexAlignItems } from '../components/utils/flex'
 import { InternalLink } from '../components/utils/internal-link'
 import { ChevronRight } from 'lucide-react'
-
+import { Color } from '../components/tokens'
 
 export default function Error404() {
-	const theme = useTheme();
 	return (
 		<div>
 			<Head>
@@ -27,14 +25,14 @@ export default function Error404() {
 					<Text size={TextSize.Huge}>Error 404. Mit Liebe verloren.</Text>
 					<Space vertical={Size.M} />
 					<Flex alignItems={FlexAlignItems.Center}>
-						<Text size={TextSize.Regular} color={theme.colors.textVariant}>
+						<Text size={TextSize.Regular} color={Color.TextVariant}>
 							<InternalLink link='/'>Back to tilman.io</InternalLink>
 						</Text>
-						<ChevronRight color={theme.colors.textVariant} />
+						<ChevronRight color={Color.TextVariant} />
 					</Flex>
 					<Space vertical={Size.XXL} />
-					<Text size={TextSize.SuperSmall} color={theme.colors.textVariant}><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
-					<Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
+					<Text size={TextSize.SuperSmall} color={Color.TextVariant}><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
+					<Text size={TextSize.SuperSmall} color={Color.TextVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
 				</OffsetArea>
 				<Space vertical={Size.XXXXXL} />
 			</Wrapper>

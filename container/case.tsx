@@ -4,7 +4,7 @@ import { BackgroundColor } from '../components/background-color';
 import { Space } from '../components/utils/space';
 import { Size } from '../components/tokens/size';
 import { Wrapper } from '../components/wrapper';
-import { useTheme } from '../components/tokens/theme';
+import { Color } from '../components/tokens/colors';
 import { WidthLimiter } from '../components/width-limiter';
 import { Button } from '../components/button';
 import { Center } from '../components/utils/center';
@@ -27,19 +27,17 @@ interface CaseProps {
 }
 
 export const Case: React.FunctionComponent<CaseProps> = props => {
-	const theme = useTheme();
-
 	return (
 		<BackgroundColor color={props.backgroundColor} style={{ marginTop: props.noNegativeMargin ? undefined : '-'+Size.XXL }}>
 			<Wrapper>
 				{!props.noNegativeMargin && <Space vertical={Size.XXL} />}
 				<Space vertical={Size.XXXXL} />
 				<WidthLimiter center>
-					<Text color={theme.colors.textVariant} center sansserif>{props.topline}</Text>
+					<Text color={Color.TextVariant} center sansserif>{props.topline}</Text>
 					<Space vertical={Size.XXS} />
-					<Text size={TextSize.Huge} color={theme.colors.background} center>{props.title}</Text>
+					<Text size={TextSize.Huge} color={Color.Background} center>{props.title}</Text>
 					<Space vertical={Size.M} />
-					<Text color={theme.colors.background} center>{props.description}</Text>
+					<Text color={Color.Background} center>{props.description}</Text>
 				</WidthLimiter>
 				<Space vertical={Size.XL} />
 				<Center horizontal>

@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { Fragment } from "react";
-import { Cover, Animation, Size, Space, Text, TextSize, useTheme, WidthLimiter, Wrapper } from "../../components";
+import { Cover, Animation, Size, Space, Text, TextSize, WidthLimiter, Wrapper, Color } from "../../components";
 import { Footer } from "../../container/footer";
 import { Releases } from "../../data/releases"
 
 export default function Home() {
-  const theme = useTheme();
 
   return (
     <>
@@ -15,7 +14,7 @@ export default function Home() {
 
           <Text size={TextSize.Regular} center sansserif>Tilman Frick</Text>
           <Space vertical={Size.XXXS} />
-          <Text size={TextSize.SuperSmall} color={theme.colors.textVariant} sansserif center>All releases</Text>
+          <Text size={TextSize.SuperSmall} color={Color.TextVariant} sansserif center>All releases</Text>
           <Space vertical={Size.L} />
           {Releases.map(release =>
             <Fragment key={release.id}>

@@ -2,6 +2,7 @@
 import * as React from 'react';
 import NextLink from 'next/link';
 import styled from '@emotion/styled';
+import { Color } from '../tokens/colors';
 
 const StyledLink = styled.span<{ noHighlighting?: boolean }>`
 	color: inherit;
@@ -10,7 +11,7 @@ const StyledLink = styled.span<{ noHighlighting?: boolean }>`
 
     ${props => !props.noHighlighting && `
         &:hover {
-            color: ${props.theme.colors.accent};
+            color: ${Color.Accent};
             text-decoration: underline;
         }
     `}

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import styled from '@emotion/styled'
-import { Size } from './tokens';
+import { Color, Size } from './tokens';
 
 const StyledLogoWrapper = styled.div`
 	width: 40px;
@@ -11,20 +11,20 @@ const StyledLogoWrapper = styled.div`
 
 	&:hover {
 		> div {
-			background-color: ${props => props.theme.colors.accent};
+			background-color: ${Color.Accent};
 			-moz-animation: logohorizontal 0.5s;
 			-webkit-animation: logohorizontal 0.5s;
 			animation: logohorizontal 0.5s;
 		}
 		> div:first-child {
 			background-color: inherit;
-			border-color: ${props => props.theme.colors.accent};
+			border-color: ${Color.Accent};
 			-moz-animation: logoborder 0.5s;
 			-webkit-animation: logoborder 0.5s;
 			animation: logoborder 0.5s;
 		}
 		> div:last-child {
-			background-color: ${props => props.theme.colors.accent};
+			background-color: ${Color.Accent};
 			-moz-animation: logovertical 0.5s;
 			-webkit-animation: logovertical 0.5s;
 			animation: logovertical 0.5s;
@@ -78,7 +78,7 @@ const StyledLogoWrapper = styled.div`
 const StyledLogoOutline = styled.div`
 	width: 100%;
 	height: 100%;
-	border: 4px solid ${props => props.theme.colors.text};
+	border: 4px solid ${Color.Text};
 	border-radius: 50%;
 	box-sizing: border-box;
 	transition: border-color .2s;
@@ -89,7 +89,7 @@ const StyledLogoHorizontal = styled.div`
 	height: 4px;
 	top: 12px;
 	left: 12px;
-	background-color: ${props => props.theme.colors.text};
+	background-color: ${Color.Text};
 	transition: background-color .2s;
 `
 
@@ -99,7 +99,7 @@ const StyledLogoVertical = styled.div`
 	height: 15px;
 	top: 14px;
 	left: 18px;
-	background-color: ${props => props.theme.colors.text};
+	background-color: ${Color.Text};
 	transition: background-color .2s;
 `
 

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styled from '@emotion/styled'
 import { Text } from './text';
-import { Size } from './tokens';
+import { Color, Size } from './tokens';
 
 interface ButtonProps {
     children?: React.ReactNode;
@@ -11,7 +11,7 @@ interface ButtonProps {
 
 const StyledButton = styled.a<{ textColor?: string }>`
     display: inline-block;
-    background-color: ${props => props.theme.colors.background};
+    background-color: ${Color.Background};
     color: ${props => props.textColor};
     text-decoration: none;
     padding: ${Size.S} ${Size.L};
@@ -19,8 +19,8 @@ const StyledButton = styled.a<{ textColor?: string }>`
     transition: background-color .2s, transform .2s, color .2s;
 
     &:hover {
-        background-color: ${props => props.theme.colors.textVariant};
-        color: ${props => props.theme.colors.background};
+        background-color: ${Color.TextVariant};
+        color: ${Color.Background};
         transform: scale(1.05);
     } 
 `

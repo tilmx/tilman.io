@@ -10,4 +10,3 @@ export * from './width-limiter';
 export * from './wrapper';
 export * from './tokens';
 export * from './utils';
-export * from './emoji-hover';

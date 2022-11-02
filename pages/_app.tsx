@@ -1,7 +1,7 @@
 import { css, Global } from '@emotion/react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { Theme } from '../components/tokens/theme';
+import { Theme } from '../components/tokens/colors';
 
 function App({ Component, pageProps }: AppProps) {
   return (

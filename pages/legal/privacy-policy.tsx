@@ -1,4 +1,3 @@
-import { useTheme } from '@emotion/react'
 import Head from 'next/head'
 import { Logo } from '../../components/logo'
 import { OffsetArea } from '../../components/offset-area'
@@ -10,9 +9,9 @@ import { Flex, FlexAlignItems } from '../../components/utils/flex'
 import { InternalLink } from '../../components/utils/internal-link'
 import { ExternalLink } from '../../components/utils/external-link'
 import { ChevronRight } from 'lucide-react'
+import { Color } from '../../components'
 
 export default function PrivacyPolicy() {
-    const theme = useTheme();
     return (
         <div>
             <Head>
@@ -220,16 +219,16 @@ export default function PrivacyPolicy() {
                     <Space vertical={Size.XXXL} />
 
                     <Flex alignItems={FlexAlignItems.Center}>
-                        <Text size={TextSize.Regular} color={theme.colors.textVariant}>
+                        <Text size={TextSize.Regular} color={Color.TextVariant}>
                             <InternalLink link='/'>Back to tilman.io</InternalLink>
                         </Text>
-                        <ChevronRight color={theme.colors.textVariant} />
+                        <ChevronRight color={Color.TextVariant} />
                     </Flex>
                     <Flex alignItems={FlexAlignItems.Center}>
-                        <Text size={TextSize.Regular} color={theme.colors.textVariant}>
+                        <Text size={TextSize.Regular} color={Color.TextVariant}>
                             <InternalLink link='/legal/sites-notice'>Site's Notice</InternalLink>
                         </Text>
-                        <ChevronRight color={theme.colors.textVariant} />
+                        <ChevronRight color={Color.TextVariant} />
                     </Flex>
                 </OffsetArea>
                 <Space vertical={Size.XXXXXL} />

@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Breakpoint } from './tokens/breakpoint';
 import { Lora } from '@next/font/google'
 import { Inter } from '@next/font/google'
-import { Size } from './tokens';
+import { Color, Size } from './tokens';
 
 interface TextProps {
     size?: TextSize;
@@ -30,7 +30,7 @@ const StyledText = styled.div<TextProps>`
     ${props => props.sansserif ? FontSansSerif.style : FontSerif.style};
     line-height: 1.4;
     ${props => props.center && 'text-align: center;'}
-    color: ${props => props.color || props.theme.colors.text};
+    color: ${props => props.color || Color.Text};
     margin: 0;
     font-weight: 500;
 	cursor: inherit;

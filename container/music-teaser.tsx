@@ -4,24 +4,23 @@ import { Animation, Flex, Space, FlexAlignItems, FlexJustifyContent, InternalLin
 import { Cover } from '../components/cover';
 import { Releases } from '../data/releases';
 import { Wrapper } from '../components/wrapper';
-import { Size, useTheme } from '../components/tokens';
+import { Color, Size } from '../components/tokens';
 import { Text, TextSize } from '../components/text';
 import { ChevronRight } from 'lucide-react';
 
 const StyledTeaser = styled.div`
-    background-color: ${props => props.theme.colors.text};
+    background-color: ${Color.Text};
     border-radius: ${Size.S};
     transition: background-color .2s, transform .2s;
     text-decoration: none;
 
     &:hover {
-        background-color: ${props => props.theme.colors.accent};
+        background-color: ${Color.Accent};
         transform: scale(1.05);
     } 
 `
 
 export const MusicTeaser: React.FunctionComponent = () => {
-    const theme = useTheme();
     const latestRelease = Releases.find(release => release.id === 'dimensions');
     return (
         <>
@@ -38,15 +37,15 @@ export const MusicTeaser: React.FunctionComponent = () => {
                                         </div>
                                         <Space horizontal={Size.M} />
                                         <div>
-                                            <Text color={theme.colors.background} sansserif>Listen to the Tilman Frick's new single »{latestRelease.title}«</Text>
+                                            <Text color={Color.Background} sansserif>Listen to the Tilman Frick's new single »{latestRelease.title}«</Text>
                                             <Space vertical={Size.XXS} />
-                                            <Text size={TextSize.SuperSmall} color={theme.colors.background} style={{ opacity: '.5' }} sansserif>Available on all major streaming platforms</Text>
+                                            <Text size={TextSize.SuperSmall} color={Color.Background} style={{ opacity: '.5' }} sansserif>Available on all major streaming platforms</Text>
                                             <Space vertical={Size.XS} />
                                         </div>
                                     </Flex>
                                         <Space horizontal={Size.XXS} />
                                     <div>
-                                        <ChevronRight color={theme.colors.background} />
+                                        <ChevronRight color={Color.Background} />
                                         <Space vertical={Size.XS} />
                                     </div>
                                 </Flex>
