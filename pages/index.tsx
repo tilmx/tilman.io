@@ -50,7 +50,7 @@ export default function Home() {
 				<Space vertical={Size.XXXXXL} />
 
 				<OffsetArea>
-					<Text size={TextSize.Huge} indent>By focussing on <i>simplicity</i> and considering the <i>smallest details</i>, I create what empowers us all in our lifes — emotions.</Text>
+					<Text size={TextSize.Huge} indent>By focussing on <i>simplicity</i> and considering the <i>smallest details</i>, I create what empowers us all in our lifes — emotions 🥹.</Text>
 				</OffsetArea>
 				<Space vertical={Size.XXXXXL} />
 			</Wrapper>
