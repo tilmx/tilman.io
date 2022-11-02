@@ -20,7 +20,9 @@ export default function Error404() {
 			</Head>
 			<Wrapper>
 				<Space vertical={Size.XL} />
-				<Logo />
+				<InternalLink link='/'>
+					<Logo />
+				</InternalLink>
 				<OffsetArea>
 					<Space vertical={Size.XXXL} />
 					<Text size={TextSize.Huge}>Error 404. Mit Liebe verloren.</Text>

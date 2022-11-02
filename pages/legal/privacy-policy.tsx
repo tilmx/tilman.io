@@ -21,7 +21,9 @@ export default function PrivacyPolicy() {
             </Head>
             <Wrapper>
                 <Space vertical={Size.XL} />
-                <Logo />
+                <InternalLink link='/'>
+                    <Logo />
+                </InternalLink>
                 <OffsetArea>
                     <Space vertical={Size.XXXL} />
                     <Text size={TextSize.Huge}>Privacy Policy</Text>

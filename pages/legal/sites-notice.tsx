@@ -21,7 +21,9 @@ export default function SitesNotice() {
             </Head>
             <Wrapper>
                 <Space vertical={Size.XL} />
-                <Logo />
+                <InternalLink link='/'>
+                    <Logo />
+                </InternalLink>
                 <OffsetArea>
                     <Space vertical={Size.XXXL} />
                     <Text size={TextSize.Huge}>Site's notice</Text>
