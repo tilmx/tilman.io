@@ -46,7 +46,7 @@ export const Case: React.FunctionComponent<CaseProps> = props => {
 					<Button link={props.link} textColor={props.backgroundColor}>{props.button}</Button>
 				</Center>
 				<Space vertical={Size.XXXL} />
-				<Image image={props.image} alt={props.imageAlt} style={{ width: props.smartphoneScreen ? '70%' : '100%', maxWidth: props.smartphoneScreen ? '360px' : undefined, borderRadius: '3px', boxShadow: !props.smartphoneScreen ? '0 0 50px rgba(0, 0, 0, 0.3)' : undefined, margin: '0 auto' }} />
+				<Image image={props.image} alt={props.imageAlt} sizes={props.smartphoneScreen ? '70vw, (min-width: 1024px) 720px' : undefined} style={{ width: props.smartphoneScreen ? '70%' : '100%', maxWidth: props.smartphoneScreen ? '360px' : undefined, borderRadius: '3px', boxShadow: !props.smartphoneScreen ? '0 0 50px rgba(0, 0, 0, 0.3)' : undefined, margin: '0 auto' }} />
 			</Wrapper>
 		</BackgroundColor>
 	)
