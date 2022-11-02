@@ -23,8 +23,8 @@ export enum TextSize {
     SuperSmall,
 }
 
-const FontSerif = Lora({ weight: '500', style: ['normal', 'italic'] })
-const FontSans = Inter({ weight: '500' })
+const FontSerif = Lora({ weight: '500', style: ['normal', 'italic'], subsets: [ 'latin' ] })
+const FontSans = Inter({ weight: '500', subsets: [ 'latin' ] })
 
 const StyledText = styled.div<TextProps>`
     line-height: 1.4;
