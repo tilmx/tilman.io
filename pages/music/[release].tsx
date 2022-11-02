@@ -6,7 +6,7 @@ import { Cover, Banner, Center, Flex, Size, Space, Text, TextSize, Wrapper, Exte
 import { Footer } from '../../container/footer';
 
 
-export default function Dimensions() {
+export default function Release() {
   const router = useRouter()
   const { release } = router.query;
   const content = Releases.find(releaseItem => releaseItem.id === release);
