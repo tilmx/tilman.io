@@ -26,7 +26,7 @@ export default function Home() {
 		<div>
 			<Head>
 				<title>Tilman Frick</title>
-				<meta name="description" content="Tilman Frick is a digital designer currently based in Hamburg, Germany. Working at Tomorrow, but available for selected freelance projects." />
+				<meta name="description" content="Tilman Frick is a digital designer and music producer currently based in Hamburg, Germany. Working at Tomorrow, but available for selected freelance projects." />
 			</Head>
 			<Wrapper>
 				<InternalLink link='/'>
