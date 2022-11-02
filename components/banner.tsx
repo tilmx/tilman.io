@@ -30,7 +30,7 @@ const StyledServiceImage = styled.img`
     border: none;
 `
 
-export const Banner: React.FunctionComponent<{ text: string; image: string; link: string; }> = props => {
+export const Banner: React.FunctionComponent<{ text: string; image: string; alt: string; link: string; }> = props => {
     const theme = useTheme();
 
     return (
@@ -39,7 +39,7 @@ export const Banner: React.FunctionComponent<{ text: string; image: string; link
                 <StyledContainer>
                     <Flex alignItems={FlexAlignItems.Center} justifyContent={FlexJustifyContent.SpaceBetween}>
                         <Flex alignItems={FlexAlignItems.Center}>
-                            <StyledServiceImage src={props.image} />
+                            <StyledServiceImage src={props.image} alt={props.alt} />
                             <Space horizontal={Size.XS} />
                             <Text size={TextSize.Regular}>{props.text}</Text>
                         </Flex>
