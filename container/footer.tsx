@@ -13,6 +13,7 @@ export const Footer: React.FunctionComponent = () => {
             <WidthLimiter>
                 <Space vertical={Size.XXL} />
                 <Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center><InternalLink link="/legal/sites-notice">Site's Notice</InternalLink></Text>
+                <Space vertical={Size.XXS} />
                 <Text size={TextSize.SuperSmall} color={theme.colors.textVariant} center><InternalLink link="/legal/privacy-policy">Privacy Police</InternalLink></Text>
                 <Space vertical={Size.XXL} />
             </WidthLimiter>
