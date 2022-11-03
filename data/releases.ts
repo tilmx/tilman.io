@@ -8,8 +8,10 @@ export const Releases: { id: string; title: string; image: StaticImageData; link
         title: 'Framed',
         image: ImageFramed,
         links: {
-            spotify: 'https://open.spotify.com/album/7mtDCWtOb60E8hIcEdrIop',
-            appleMusic: 'https://geo.music.apple.com/song/1651115815',
+            spotify: 'https://open.spotify.com/track/4P6U2svHt3KidM20k8W3ai',
+            appleMusic: 'https://music.apple.com/album/framed/1651115814',
+            itunes: 'https://music.apple.com/album/framed/1651115814?app=itunes',
+            deezer: 'https://www.deezer.com/album/368957247',
         }
     },
     {
@@ -18,8 +20,8 @@ export const Releases: { id: string; title: string; image: StaticImageData; link
         image: ImageDimensions,
         links: {
             spotify: 'https://open.spotify.com/track/2C0iJEwDnUvP8xVPxDkni6',
-            appleMusic: 'https://music.apple.com/de/album/dimensions-single/1623142688',
-            itunes: 'https://music.apple.com/de/album/dimensions-single/1623142688?app=itunes',
+            appleMusic: 'https://music.apple.com/album/dimensions-single/1623142688',
+            itunes: 'https://music.apple.com/album/dimensions-single/1623142688?app=itunes',
             deezer: 'https://www.deezer.com/album/317077647'
         }
     }
