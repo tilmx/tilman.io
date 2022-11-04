@@ -21,7 +21,7 @@ const StyledTeaser = styled.div`
 `
 
 export const MusicTeaser: React.FunctionComponent = () => {
-    const latestRelease = Releases.find(release => release.id === 'dimensions');
+    const latestRelease = Releases.find(release => release.id === 'framed');
     return (
         <>
             {latestRelease &&
