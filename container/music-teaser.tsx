@@ -37,7 +37,7 @@ export const MusicTeaser: React.FunctionComponent = () => {
                                         </div>
                                         <Space horizontal={Size.M} />
                                         <div>
-                                            <Text color={Color.Background} sansserif>Listen to the Tilman Frick's new single »{latestRelease.title}«</Text>
+                                            <Text color={Color.Background} sansserif>Listen to Tilman Frick's new single »{latestRelease.title}«</Text>
                                             <Space vertical={Size.XXS} />
                                             <Text size={TextSize.SuperSmall} color={Color.Background} style={{ opacity: '.5' }} sansserif>Available on all major streaming platforms</Text>
                                             <Space vertical={Size.XS} />
