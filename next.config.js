@@ -10,7 +10,7 @@ const nextConfig = {
     return [
       {
         source: '/moia-design-bites',
-        destination: 'https://codesandbox.io/s/moia-design-bites-c4lo1i',
+        destination: 'https://codesandbox.io/s/moia-design-bites-start-65mxcv?file=/src/App.tsx',
         permanent: false,
       },
     ]
