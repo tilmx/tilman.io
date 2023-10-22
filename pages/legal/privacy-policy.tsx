@@ -176,46 +176,6 @@ export default function PrivacyPolicy() {
                     <Space vertical={Size.S} />
                     <Text>Persons under 16 should not send us personal data without the consent of their parents or persons with parental power. We
                         ask for no personal data from children and adolescents, nor do we collect such information nor pass it on to third parties.</Text>
-
-                    <Space vertical={Size.L} />
-                    <Text size={TextSize.Large}>Use Of Cookies</Text>
-                    <Space vertical={Size.S} />
-                    <Text>Cookies are small text files that are stored on your computer and saved by your browser. Cookies do not cause any damage
-                        to your computer and do not contain any viruses. Our cookies remain stored on your terminal for a certain period of time.</Text>
-                    <Text>In your browser settings, you can determine whether you want to be informed merely about the setting of a cookie, whether
-                        you want to grant or exclude permission either for individual cases or for cookies in general, or whether you want cookies
-                        to be automatically deleted when your browser is closed. Disabling cookies may limit the functionality of this website.</Text>
-                    <Text>Cookies, which are necessary for the execution of the electronic communication process or for the provision of certain functions
-                        desired by you, are stored on the basis of Art. 6 para. 1 lit. f) GDPR. The website operator has a legitimate interest
-                        in the storage of cookies for technically error-free and optimized provision of his services. If other cookies (e.g. cookies
-                        for analyzing your surfing behavior) are stored, they are handled separately under the analysis service used.</Text>
-                    <Text>Our cookies remain on your computer for a certain period of time enabling our cloud provider to recognize your computer
-                        behind a shared IP-address space on the basis of the logged data (visit to our website including date and time, browser
-                        type, operating system) in order to provide end user security.</Text>
-                    <Space vertical={Size.S} />
-
-                    <Text>Cloudflare</Text>
-                    <Space vertical={Size.S} />
-
-                    <Text>
-                        <a href="https://support.cloudflare.com/hc/en-us/articles/200170156-What-does-the-Cloudflare-cfduid-cookie-do-">https://support.cloudflare.com/hc/en-us/articles/200170156-What-does-the-Cloudflare-cfduid-cookie-do-</a>
-                    </Text>
-
-                    <Space vertical={Size.L} />
-                    <Text size={TextSize.Large}>Link to third parties</Text>
-                    <Space vertical={Size.S} />
-                    <Text>Embedding of external platforms</Text>
-                    <Space vertical={Size.S} />
-                    <Text>You will find links to other websites on this website, directly or indirectly by means of links. The legal basis for such
-                        processing is our legitimate interest pursuant to Art. 6 para. 1 lit. f) GDPR. We may process your personal data until
-                        our legitimate interest ceases to exist.</Text>
-                    <Text>We hereby expressly distance ourselves from all contents of these sites to which links are established and do not adopt
-                        these contents as our own. We do not have any influence on changes of the linked content. Our website may contain links
-                        to other providers’ websites, which are not covered by this data protection policy. To the extent that the use of websites
-                        of other providers involves the capture, processing and use of personal data, please refer to the data protection policy
-                        of the relevant provider.</Text>
-                    <Text>Version: May 2018</Text>
-
                     <Space vertical={Size.XXXL} />
 
                     <Flex alignItems={FlexAlignItems.Center}>
