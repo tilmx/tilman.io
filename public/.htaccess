@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+<IfModule mod_headers.c>
+<FilesMatch "\.(ico|jpg|jpeg|gif|png|pdf|mp3|mp4|webp|WEBP|woff2|js)$">
+Header set Cache-Control "public, max-age=31536000, no-transform"
+</FilesMatch>
+</IfModule> 
