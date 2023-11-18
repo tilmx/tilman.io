@@ -12,6 +12,7 @@ import { Case } from '../container/case'
 import { BackgroundColor } from '../components/background-color'
 import { InternalLink } from '../components/utils/internal-link'
 import ImageTilman from '../public/images/tilman.jpg';
+import ImageCaseInvisibleHotels from '../public/images/case-invisiblehotels.png';
 import ImageCaseTom from '../public/images/case-tom.png';
 import ImageCaseAlva from '../public/images/case-alva.png';
 import ImageCaseEd from '../public/images/case-ed.jpg';
@@ -56,6 +57,16 @@ export default function Home() {
 
 			<Case
 				noNegativeMargin
+				topline='Idea, Design & Development'
+				title='Invisible Hotels'
+				description='All the lovely, minimalistic, and fancy hotels & apartments where we stayed already — or would love to.'
+				button='Explore invisiblehotels.com'
+				link='https://invisiblehotels.com'
+				image={ImageCaseInvisibleHotels}
+				imageAlt="Screenshot of invisiblehotels.com"
+				backgroundColor='#108A5F'
+			/>
+			<Case
 				topline='Lead Product Designer'
 				title='Tomorrow'
 				description='Tomorrow is the first European company to combine mobile banking and sustainable finances. Since March 2019, the social business from Hamburg already has over 120,000 customers and currently is the best rated finance app in Germany.'
