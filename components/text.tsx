@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from '@emotion/styled';
 import { Breakpoint } from './tokens/breakpoint';
-import { Lora } from '@next/font/google'
-import { Inter } from '@next/font/google'
+import { Lora } from "next/font/google"
+import { Inter } from "next/font/google"
 import { Color, Size } from './tokens';
 
 interface TextProps {
