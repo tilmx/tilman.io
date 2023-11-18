@@ -7,7 +7,6 @@ import { Space } from '../../components/utils/space'
 import { Wrapper } from '../../components/wrapper'
 import { Flex, FlexAlignItems } from '../../components/utils/flex'
 import { InternalLink } from '../../components/utils/internal-link'
-import { ExternalLink } from '../../components/utils/external-link'
 import { ChevronRight } from 'lucide-react'
 import { Color } from '../../components'
 
