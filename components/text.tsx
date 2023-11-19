@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { Breakpoint } from './tokens/breakpoint';
-import { DM_Sans, EB_Garamond, Space_Grotesk, Space_Mono } from "next/font/google"
+import { EB_Garamond, Space_Grotesk, Space_Mono } from "next/font/google"
 import { FunctionComponent, MouseEventHandler, ReactNode } from 'react';
 
 interface TextProps {
@@ -58,7 +58,7 @@ const StyledText = styled.p<TextProps>`
 
 export const Text: FunctionComponent<TextProps> = props => {
     return (
-        <StyledText bold={props.bold} mono={props.mono} serif={props.serif} size={props.size || TextSize.Regular} className={props.className} onClick={props.onClick}>
+        <StyledText mono={props.mono} serif={props.serif} size={props.size || TextSize.Regular} className={props.className} onClick={props.onClick}>
             {props.children}
         </StyledText>
     );

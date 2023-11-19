@@ -67,7 +67,6 @@ const Card: FunctionComponent<{ url: string; title: string; years: string; role:
     </StyledCard>
 );
 
-
 const StyledImage = styled(ExportedImage)`
     width: 100%;
     height: auto;
@@ -106,7 +105,7 @@ export default function Home() {
                 </StyledPortfolioColumn>
             </StyledPortfolio>
             <StyledContent>
-                <Text size={TextSize.Large} serif >Currently working at Tomorrow. Previously Accenture Interactive, SinnerSchrader, elbdudler. But available for selected freelance projects.</Text>
+                <Text size={TextSize.Large} serif>Currently working at Tomorrow. Previously Accenture Interactive, SinnerSchrader, elbdudler. But available for selected freelance projects.</Text>
                 <Button text='Get in touch' />
             </StyledContent>
         </>
