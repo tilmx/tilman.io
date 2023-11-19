@@ -87,39 +87,37 @@ export default function PrivacyPolicy() {
                     given opt-ins at any time.</Text>
                 <Text>In case we process personal data of you, you are so called “affected” within the meaning of the General Data Protection Regulation
                     (GDPR) and you have the following rights vis-à-vis the controller:</Text>
-                <Text>
-                    <ul>
-                        <li>Right to information according to Art. 15 GDPR</li>
-                    </ul>
-                </Text>
+                <ul>
+                    <li>
+                        <Text>Right to information according to Art. 15 GDPR</Text>
+                    </li>
+                </ul>
                 <Text>You have the right to get information for free about your personal data stored by us at any time. Furthermore, you have the
                     right to have your data provided to us transferred to yourself or a third party at any time.</Text>
-                <Text>
-                    <ul>
-                        <li>
-                            <Text>Right to correct any information that is inaccurate or incomplete according to Art. 16 GDPR</Text>
-                        </li>
-                        <li>
-                            <Text>Right to Deletion according to Art. 17 GDPR</Text>
-                        </li>
-                        <li>
-                            <Text>Right to limitation of processing according to Art. 18 GDPR</Text>
-                        </li>
-                    </ul>
-                </Text>
+                <ul>
+                    <li>
+                        <Text>Right to correct any information that is inaccurate or incomplete according to Art. 16 GDPR</Text>
+                    </li>
+                    <li>
+                        <Text>Right to Deletion according to Art. 17 GDPR</Text>
+                    </li>
+                    <li>
+                        <Text>Right to limitation of processing according to Art. 18 GDPR</Text>
+                    </li>
+                </ul>
                 <Text>At your request, we will correct, block or delete the personal data stored about you, provided that other statutory regulations
                     (e.g. obligations to store data from the German Commercial Code) do not prevent this.</Text>
-                <Text>
-                    <ul>
-                        <li>Right to data transferability according to Art. 20 GDPR</li>
-                    </ul>
-                </Text>
+                <ul>
+                    <li>
+                        <Text>Right to data transferability according to Art. 20 GDPR</Text>
+                    </li>
+                </ul>
                 <Text>You have the right to get information about your personal data for free in a structured, current and readable format</Text>
-                <Text>
-                    <ul>
-                        <li>Right of contradiction/revocation of permission according to Art. 21 GDPR</li>
-                    </ul>
-                </Text>
+                <ul>
+                    <li>
+                        <Text>Right of contradiction/revocation of permission according to Art. 21 GDPR</Text>
+                    </li>
+                </ul>
                 <Text>If you have given us your consent to process your personal data, you can revoke this at any time</Text>
                 <Text>
                     <ul>

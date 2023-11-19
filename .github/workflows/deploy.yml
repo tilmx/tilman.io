@@ -33,6 +33,11 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_PUBLIC_SITESNOTICE_ADDRESS: ${{ vars.NEXT_PUBLIC_SITESNOTICE_ADDRESS }}
+          NEXT_PUBLIC_SITESNOTICE_EMAIL: ${{ vars.NEXT_PUBLIC_SITESNOTICE_EMAIL }}
+          NEXT_PUBLIC_SITESNOTICE_PHONE: ${{ vars.NEXT_PUBLIC_SITESNOTICE_PHONE }}
+          
 
       - name: Optimize Images
         run: npm run optimize-images
