@@ -1,36 +1,29 @@
-import * as React from 'react';
-import styled from '@emotion/styled'
+
+import styled from '@emotion/styled';
+import React from 'react';
+import { Size } from './tokens/size';
+import { Color } from './tokens/colors';
 import { Text } from './text';
-import { Color, Size } from './tokens';
 
-interface ButtonProps {
-    children?: React.ReactNode;
-    textColor?: string;
-    link?: string;
-}
+type ButtonProps = {
+    text: string;
+    onClick?: () => void;
+};
 
-const StyledButton = styled.a<{ textColor?: string }>`
+const StyledButton = styled.div`
     display: inline-block;
-    background-color: ${Color.Background};
-    color: ${props => props.textColor};
-    text-decoration: none;
-    padding: ${Size.S} ${Size.L};
-    border-radius: ${Size.XXS};
-    transition: background-color .2s, transform .2s, color .2s;
+    padding: ${Size.XS} ${Size.S};
+    background: ${Color.Text};
+    color: ${Color.Background};
+    border-radius: ${Size.XS};
+`;
 
-    &:hover {
-        background-color: ${Color.TextVariant};
-        color: ${Color.Background};
-        transform: scale(1.05);
-    } 
-`
-
-export const Button: React.FunctionComponent<ButtonProps> = props => {
+const Button: React.FC<ButtonProps> = ({ text, onClick }) => {
     return (
-        <StyledButton href={props.link} target='_blank' textColor={props.textColor}>
-            <Text color="inherit" sansserif>
-                {props.children}
-            </Text>
+        <StyledButton onClick={onClick}>
+            <Text>{text}</Text>
         </StyledButton>
-    )
-}
+    );
+};
+
+export default Button;
