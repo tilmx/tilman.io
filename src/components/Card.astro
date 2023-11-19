@@ -1,61 +1,49 @@
 ---
+import Text from "./Text.astro";
+
 interface Props {
+	url: string;
 	title: string;
-	body: string;
-	href: string;
+	years: string;
+	role: string;
+	description: string;
+	color: string;
 }
 
-const { href, title, body } = Astro.props;
+const { url, title, years, role, description, color } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
+<a class="card" href={url} target="_blank">
+	<Text size="large">{title}</Text>
+	<div class="content">
+		<Text>{description}</Text>
+		<div class="details">
+			<Text mono>{role}</Text>
+			<Text mono>{years}</Text>
+		</div>
+	</div>
+</a>
+<style define:vars={{ color }}>
+	.card {
+		background: var(--color);
+		padding: var(--size-xl);
+		border-radius: var(--size-m);
+		min-height: 420px;
 		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+		flex-direction: column;
+		justify-content: space-between;
+		color: unset;
+		text-decoration: unset;
 	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
+
+	.card .content {
+		display: flex;
+		flex-direction: column;
+		gap: var(--size-s);
 	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
+
+	.card .details {
+		display: flex;
+		justify-content: space-between;
 	}
 </style>

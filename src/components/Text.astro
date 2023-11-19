@@ -1,0 +1,57 @@
+---
+interface Props {
+	serif?: boolean;
+	mono?: boolean;
+	size?: "regular" | "large" | "huge";
+}
+
+const { serif, mono, size } = Astro.props;
+---
+
+<p class:list={["box", size, { serif, mono }]}>
+	<slot />
+</p>
+<style is:global>
+	body {
+		line-height: 1.2;
+		font-family: "Space Grotesk", sans-serif;
+		font-size: 20px;
+	}
+	/*{Breakpoint.Mobile} {
+		body {
+			font-size: 17px;
+		}
+	}*/
+</style>
+<style>
+	p {
+		margin: 0;
+	}
+
+	p.serif {
+		font-family: "EB Garamond", serif;
+	}
+
+	p.mono {
+		font-family: "Space Mono", monospace;
+	}
+
+	p.huge {
+		font-size: 48px;
+	}
+
+	/*{Breakpoint.Tablet} {
+		p.huge {
+            font-size: 40px;
+		}
+	}
+
+    {Breakpoint.Mobile} {
+		p.huge {
+            font-size: 24px;
+        }
+		p.large {
+			font-size: 24px;
+		}
+	}*/
+</style>

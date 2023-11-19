@@ -10,6 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@fontsource/eb-garamond": "^5.0.15",
+    "@fontsource/space-grotesk": "^5.0.15",
+    "@fontsource/space-mono": "^5.0.17",
     "astro": "^3.5.5"
   },
   "devDependencies": {
