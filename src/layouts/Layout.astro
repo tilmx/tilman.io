@@ -1,4 +1,8 @@
 ---
+import "@fontsource/space-grotesk";
+import "@fontsource/space-mono";
+import "@fontsource/eb-garamond";
+
 interface Props {
 	title: string;
 }
@@ -21,13 +25,27 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
+		--color-text: #ffffff;
+		--color-background: #000000;
+		--size-xxxs: 4px;
+		--size-xxs: 8px;
+		--size-xs: 12px;
+		--size-s: 16px;
+		--size-m: 24px;
+		--size-l: 36px;
+		--size-xl: 48px;
+		--size-xxl: 72px;
+		--size-xxxl: 96px;
+		--size-xxxxl: 168px;
+		--size-xxxxxl: 256px;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		background: var(--color-background);
+		color: var(--color-text);
+		-webkit-font-smoothing: antialiased;
+	}
+	body {
+		margin: 0;
 	}
 </style>
