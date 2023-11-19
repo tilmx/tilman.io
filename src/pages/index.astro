@@ -1,7 +1,26 @@
 ---
+import styled from "@emotion/styled";
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Text from "../components/Text.astro";
+
+const StyledPortfolio = styled.div`
+	margin: 0 auto var(--size-xxxxxl);
+	padding: 0 var(--size-m);
+	max-width: 1280px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--size-m);
+	@media max-width(960px) {
+		grid-template-columns: 1fr;
+	}
+`;
+
+const StyledPortfolioColumn = styled.div`
+	display: flex;
+	flex-direction: column;
+	gap: var(--size-m);
+`;
 ---
 
 <Layout title="Tilman Frick">
@@ -23,38 +42,44 @@ import Text from "../components/Text.astro";
 		<Text size="huge" serif>— T</Text>
 	</div>
 
-	<Card
-		url="https://tomorrow.one"
-		years="2019+"
-		title="Tomorrow"
-		role="#Lead Product Designer"
-		description="The first European company to combine mobile banking and sustainable finances. Best rated finance app in Germany with over 120,000 customers."
-		color="#FF916E"
-	/>
-	<Card
-		url="https://github.com/meetalva/alva"
-		years="2016-2019"
-		title="Alva"
-		role="#Creator, #Product Lead"
-		description="A radically new digital design tool built for cross-functional product teams. Alva lets you design interactive products based on the same components your engineers are using for production websites."
-		color="#E24772"
-	/>
-	<Card
-		url="https://invisiblehotels.com"
-		years="2023+"
-		title="Invisible Hotels"
-		role="#Idea, #Design, #Code"
-		description="A personal collection of all the lovely, minimalistic, and fancy hotels & apartments where we stayed already — or would love to."
-		color="#108A5F"
-	/>
-	<Card
-		url="https://tilman.io"
-		years="2022+"
-		title="Music"
-		role="#Producer"
-		description=""
-		color="#0C2EF9"
-	/>
+	<StyledPortfolio>
+		<StyledPortfolioColumn>
+			<Card
+				url="https://tomorrow.one"
+				years="2019+"
+				title="Tomorrow"
+				role="#Lead Product Designer"
+				description="The first European company to combine mobile banking and sustainable finances. Best rated finance app in Germany with over 120,000 customers."
+				color="#FF916E"
+			/>
+			<Card
+				url="https://github.com/meetalva/alva"
+				years="2016-2019"
+				title="Alva"
+				role="#Creator, #Product Lead"
+				description="A radically new digital design tool built for cross-functional product teams. Alva lets you design interactive products based on the same components your engineers are using for production websites."
+				color="#E24772"
+			/>
+		</StyledPortfolioColumn>
+		<StyledPortfolioColumn>
+			<Card
+				url="https://invisiblehotels.com"
+				years="2023+"
+				title="Invisible Hotels"
+				role="#Idea, #Design, #Code"
+				description="A personal collection of all the lovely, minimalistic, and fancy hotels & apartments where we stayed already — or would love to."
+				color="#108A5F"
+			/>
+			<Card
+				url="https://tilman.io"
+				years="2022+"
+				title="Music"
+				role="#Producer"
+				description=""
+				color="#0C2EF9"
+			/>
+		</StyledPortfolioColumn>
+	</StyledPortfolio>
 	<div class="content">
 		<Text size="large" serif>
 			Currently working at Tomorrow. Previously Accenture Interactive,
