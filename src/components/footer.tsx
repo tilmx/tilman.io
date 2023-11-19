@@ -1,9 +1,7 @@
 import styled from '@emotion/styled';
 import { Size } from './tokens/size';
-import { Color } from './tokens/colors';
 import { Text } from './text';
-import { FunctionComponent } from 'react';
-import Link from 'next/link';
+import type { FunctionComponent } from 'react';
 
 const StyledFooter = styled.div`
     max-width: 1080px;
@@ -12,7 +10,7 @@ const StyledFooter = styled.div`
     gap: ${Size.M};
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
     color: unset;
     text-decoration: unset;
 `;
