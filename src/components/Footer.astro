@@ -1,18 +1,21 @@
 ---
 import Text from "./Text.astro";
+import Wrapper from "./Wrapper.astro";
 ---
 
-<div class="footer">
-	<a class="link" href="/legal/sites-notice">
-		<Text>Site's notice</Text>
-	</a>
-	<a class="link" href="/legal/privacy-policy">
-		<Text>Privacy Policy</Text>
-	</a>
-</div>
+<Wrapper>
+	<div class="footer">
+		<a class="link" href="/legal/sites-notice">
+			<Text>Site's notice</Text>
+		</a>
+		<a class="link" href="/legal/privacy-policy">
+			<Text>Privacy Policy</Text>
+		</a>
+	</div>
+</Wrapper>
+
 <style lang="scss">
 	.footer {
-		max-width: 1080px;
 		margin: var(--size-xxxl) auto;
 		display: flex;
 		gap: var(--size-m);
