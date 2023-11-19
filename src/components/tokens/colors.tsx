@@ -1,13 +1,13 @@
 
 import { css, Global } from '@emotion/react';
-import React from 'react';
+import type { FunctionComponent } from 'react';
 
 export enum Color {
     Text = 'var(--color-text)',
     Background = 'var(--color-background)',
 }
 
-export const Theme: React.FunctionComponent<{ children?: React.ReactNode }> = props => {
+export const Theme: FunctionComponent<{ children?: React.ReactNode }> = props => {
     return (
         <>
             <Global styles={css`
