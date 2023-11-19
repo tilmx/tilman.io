@@ -2,14 +2,12 @@
 interface Props {
 	serif?: boolean;
 	mono?: boolean;
-	size?: "regular" | "large" | "huge";
+	size?: "small" | "regular" | "large" | "huge";
 }
 const { serif, mono, size } = Astro.props;
 ---
 
-<p class:list={[size, { serif, mono }]}>
-	<slot />
-</p>
+<p class:list={[size, { serif, mono }]}><slot /></p>
 <style is:global lang="scss">
 	body {
 		line-height: 1.2;
@@ -34,22 +32,30 @@ const { serif, mono, size } = Astro.props;
 		font-family: "Space Mono", monospace;
 	}
 
-	p.huge {
-		font-size: 48px;
-
-		@media (max-width: 960px) {
-			font-size: 40px;
-		}
-
-		@media (max-width: 540px) {
-			font-size: 24px;
-		}
+	p.small {
+		font-size: 14px;
 	}
 
 	p.large {
 		font-size: 36px;
+	}
 
-		@media (max-width: 540px) {
+	p.huge {
+		font-size: 48px;
+	}
+
+	@media (max-width: 960px) {
+		p.huge {
+			font-size: 40px;
+		}
+	}
+
+	@media (max-width: 540px) {
+		p.huge {
+			font-size: 24px;
+		}
+
+		p.large {
 			font-size: 24px;
 		}
 	}
