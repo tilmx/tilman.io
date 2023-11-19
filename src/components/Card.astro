@@ -1,5 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import Text from "./Text.astro";
+import Tag from "./Tag.astro";
+import type { ImageMetadata } from "astro";
 
 interface Props {
 	url: string;
@@ -8,42 +11,78 @@ interface Props {
 	role: string;
 	description: string;
 	color: string;
+	image?: ImageMetadata;
 }
 
-const { url, title, years, role, description, color } = Astro.props;
+const { url, title, years, role, description, color, image } = Astro.props;
 ---
 
 <a class="card" href={url} target="_blank">
-	<Text size="large">{title}</Text>
-	<div class="content">
+	<div class="card-inner">
+		<Text size="large">{title}</Text>
 		<Text>{description}</Text>
 		<div class="details">
-			<Text mono>{role}</Text>
-			<Text mono>{years}</Text>
+			<Tag>{role}</Tag>
+			<Tag>{years}</Tag>
 		</div>
 	</div>
+	{image && <Image class="card-image" src={image} sizes="708px" alt="" />}
 </a>
 <style lang="scss" define:vars={{ color }}>
 	.card {
 		background: var(--color);
-		padding: var(--size-xl);
 		border-radius: var(--size-m);
-		min-height: 440px;
+		min-height: 460px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		color: unset;
 		text-decoration: unset;
+		transition: transform 0.2s ease-in-out;
+		position: relative;
 
-		.content {
+		@media (max-width: 540px) {
+			min-height: 400px;
+		}
+
+		&:after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: var(--size-m);
+			box-shadow: 0 var(--size-m) var(--size-xxxxxl) var(--color);
+			opacity: 0.6;
+		}
+
+		.card-image {
+			width: 100%;
+			margin: 0 auto;
+			height: auto;
+		}
+
+		.card-inner {
+			padding: var(--size-xl);
 			display: flex;
 			flex-direction: column;
-			gap: var(--size-s);
+			gap: var(--size-xs);
+
+			@media (max-width: 540px) {
+				padding: var(--size-m);
+			}
 		}
 
 		.details {
 			display: flex;
-			justify-content: space-between;
+			gap: var(--size-xxs);
+			margin-top: var(--size-xs);
+			flex-wrap: wrap;
+		}
+
+		&:hover {
+			transform: scale(1.02);
 		}
 	}
 </style>

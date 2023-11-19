@@ -1,0 +1,17 @@
+---
+import Text from "./Text.astro";
+---
+
+<div class="tag">
+	<Text>
+		<slot />
+	</Text>
+</div>
+<style lang="scss">
+	.tag {
+		display: inline-block;
+		padding: var(--size-xxs) var(--size-s);
+		border-radius: var(--size-s);
+		background-color: rgba(0, 0, 0, 0.2);
+	}
+</style>

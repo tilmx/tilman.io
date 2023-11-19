@@ -5,6 +5,7 @@ import Text from "../components/Text.astro";
 import { Image } from "astro:assets";
 import AboutImage from "../images/tilman.jpg";
 import Wrapper from "../components/Wrapper.astro";
+import TomorrowImage from "../images/projects/tomorrow.png";
 ---
 
 <Layout title="Tilman Frick">
@@ -36,8 +37,9 @@ import Wrapper from "../components/Wrapper.astro";
 					years="2019+"
 					title="Tomorrow"
 					role="#Lead Product Designer"
-					description="The first European company to combine mobile banking and sustainable finances. Best rated finance app in Germany with over 120,000 customers."
+					description="Germany's best rated finance app combining mobile banking and sustainable finances for >120.000 customers."
 					color="#FF916E"
+					image={TomorrowImage}
 				/>
 				<Card
 					url="https://github.com/meetalva/alva"
@@ -45,7 +47,15 @@ import Wrapper from "../components/Wrapper.astro";
 					title="Alva"
 					role="#Creator, #Product Lead"
 					description="A radically new digital design tool built for cross-functional product teams. Alva lets you design interactive products based on the same components your engineers are using for production websites."
-					color="#E24772"
+					color="#818D96"
+				/>
+				<Card
+					url="https://tilman.io"
+					years="2022+"
+					title="Music"
+					role="#Producer"
+					description=""
+					color="#0C2EF9"
 				/>
 			</div>
 			<div class="projects-column">
@@ -67,16 +77,8 @@ import Wrapper from "../components/Wrapper.astro";
 					years="2023+"
 					title="Invisible Hotels"
 					role="#Idea, #Design, #Code"
-					description="A personal collection of all the lovely, minimalistic, and fancy hotels & apartments where we stayed already — or would love to."
+					description="A collection of all the lovely, minimalistic, and fancy hotels & apartments where we stayed already — or would love to."
 					color="#108A5F"
-				/>
-				<Card
-					url="https://tilman.io"
-					years="2022+"
-					title="Music"
-					role="#Producer"
-					description=""
-					color="#0C2EF9"
 				/>
 			</div>
 		</div>
@@ -117,6 +119,10 @@ import Wrapper from "../components/Wrapper.astro";
 		display: flex;
 		flex-direction: column;
 		gap: var(--size-l);
+
+		@media (max-width: 960px) {
+			margin-bottom: var(--size-xxxxl);
+		}
 	}
 
 	.portfolio-image {
@@ -126,13 +132,22 @@ import Wrapper from "../components/Wrapper.astro";
 			width: 100%;
 			height: auto;
 			border-radius: var(--size-m);
+			object-fit: cover;
+
+			@media (max-width: 960px) {
+				max-height: 480px;
+			}
+
+			@media (max-width: 540px) {
+				max-height: 420px;
+			}
 		}
 
 		.portfolio-image-copyright {
 			position: absolute;
-			bottom: var(--size-xs);
-			right: var(--size-xs);
-			opacity: 0.5;
+			bottom: var(--size-m);
+			left: var(--size-m);
+			opacity: 0.3;
 		}
 	}
 </style>
