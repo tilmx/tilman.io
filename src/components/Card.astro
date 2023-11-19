@@ -11,10 +11,12 @@ interface Props {
 	role: string;
 	description: string;
 	color: string;
+	textColor?: string;
 	image?: ImageMetadata;
 }
 
-const { url, title, years, role, description, color, image } = Astro.props;
+const { url, title, years, role, description, color, textColor, image } =
+	Astro.props;
 ---
 
 <a class="card" href={url} target="_blank">
@@ -28,7 +30,7 @@ const { url, title, years, role, description, color, image } = Astro.props;
 	</div>
 	{image && <Image class="card-image" src={image} sizes="708px" alt="" />}
 </a>
-<style lang="scss" define:vars={{ color }}>
+<style lang="scss" define:vars={{ color, textColor }}>
 	.card {
 		background: var(--color);
 		border-radius: var(--size-m);
@@ -37,6 +39,7 @@ const { url, title, years, role, description, color, image } = Astro.props;
 		flex-direction: column;
 		justify-content: space-between;
 		color: unset;
+		color: var(--textColor);
 		text-decoration: unset;
 		transition: transform 0.2s ease-in-out;
 		position: relative;
