@@ -1,89 +1,47 @@
-import * as React from 'react';
 import styled from '@emotion/styled';
 import { Breakpoint } from './tokens/breakpoint';
-import { Lora } from "next/font/google"
-import { Inter } from "next/font/google"
-import { Color, Size } from './tokens';
+import { EB_Garamond } from "next/font/google"
+import { CSSProperties, FunctionComponent, MouseEventHandler, ReactNode } from 'react';
 
 interface TextProps {
     size?: TextSize;
-    color?: string;
-    center?: boolean;
-    children?: React.ReactNode;
-    style?: React.CSSProperties;
-    sansserif?: boolean;
-    indent?: boolean
+    children?: ReactNode;
+    className?: string;
+    onClick?: MouseEventHandler;
 }
 
 export enum TextSize {
-    Huge,
-    Large,
     Regular,
-    Small,
-    SuperSmall,
+    Large,
 }
 
-const FontSerif = Lora({ weight: '500', style: ['normal', 'italic'], subsets: [ 'latin' ] })
-const FontSans = Inter({ weight: '500', subsets: [ 'latin' ] })
+const FontSerif = EB_Garamond({ weight: '400', style: ['normal', 'italic'], subsets: ['latin'] })
 
-const StyledText = styled.div<TextProps>`
-    ${props => props.sansserif ? FontSans.style : FontSerif.style}
-    line-height: 1.4;
-    ${props => props.center && 'text-align: center;'}
-    color: ${props => props.color || Color.Text};
+const StyledText = styled.p<TextProps>`
+    ${FontSerif.style}
+    line-height: 1.2;
     margin: 0;
-    font-weight: 500;
-	cursor: inherit;
-
-    ${props => props.size === TextSize.Huge && `
-        font-size: 68px;
-        line-height: 1.2;
-
-        ${Breakpoint.Tablet} {
-            font-size: 56px;
-        }
-
-        ${Breakpoint.Mobile} {
-            font-size: 40px;
-        }
-    `}
 
     ${props => props.size === TextSize.Large && `
-        font-size: 36px;
-        line-height: 1.3;
-        text-underline-offset: 5px;
+        font-size: 48px;
 
-        ${Breakpoint.Tablet} {
+        ${Breakpoint.Mobile} {
             font-size: 24px;
         }
     `}
 
     ${props => props.size === TextSize.Regular && `
         font-size: 20px;
-        text-underline-offset: 5px;
-    `}
-
-    ${props => props.size === TextSize.Small && `
-        font-size: 16px;
-    `}
-
-    ${props => props.size === TextSize.SuperSmall && `
-        font-size: 13px;
-        text-underline-offset: 3px;
-    `}
-
-    ${props => props.indent && `
-        text-indent: min(10vw, ${Size.XXXL});
 
         ${Breakpoint.Mobile} {
-            text-indent: 0;
+            font-size: 17px;
         }
-    `} 
+    `}
 `;
 
-export const Text: React.FunctionComponent<TextProps> = props => {
+export const Text: FunctionComponent<TextProps> = props => {
     return (
-        <StyledText size={props.size || TextSize.Regular} {...props}>
+        <StyledText size={props.size || TextSize.Regular} className={props.className} onClick={props.onClick}>
             {props.children}
         </StyledText>
     );
