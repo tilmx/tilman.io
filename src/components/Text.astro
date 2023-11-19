@@ -1,13 +1,12 @@
 ---
 interface Props {
 	serif?: boolean;
-	mono?: boolean;
 	size?: "small" | "regular" | "large" | "huge";
 }
-const { serif, mono, size } = Astro.props;
+const { serif, size } = Astro.props;
 ---
 
-<p class:list={[size, { serif, mono }]}><slot /></p>
+<p class:list={[size, { serif }]}><slot /></p>
 <style is:global lang="scss">
 	body {
 		line-height: 1.2;
@@ -26,10 +25,6 @@ const { serif, mono, size } = Astro.props;
 
 	p.serif {
 		font-family: "EB Garamond", serif;
-	}
-
-	p.mono {
-		font-family: "Space Mono", monospace;
 	}
 
 	p.small {
