@@ -2,7 +2,7 @@ name: Deploy via SSH
 
 on:
   push:
-    branches: [try-astro]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
