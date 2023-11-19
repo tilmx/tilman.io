@@ -7,6 +7,7 @@ import ExportedImage from 'next-image-export-optimizer';
 import TilmanImage from '../public/images/tilman.jpg';
 import { Button } from '../components/button';
 import { Breakpoint } from '../components/tokens/breakpoint';
+import { Footer } from '../components/footer';
 
 const StyledContent = styled.div`
 	margin: ${Size.XXXXXL} auto;
@@ -105,9 +106,10 @@ export default function Home() {
                 </StyledPortfolioColumn>
             </StyledPortfolio>
             <StyledContent>
-                <Text size={TextSize.Large} serif>Currently working at Tomorrow. Previously Accenture Interactive, SinnerSchrader, elbdudler. But available for selected freelance projects.</Text>
-                <Button text='Get in touch' />
+                <Text size={TextSize.Large} serif>Currently working at Tomorrow. Previously Accenture Interactive, SinnerSchrader, elbdudler.</Text>
+                <Text size={TextSize.Large} serif>Available for selected freelance projects.</Text>
             </StyledContent>
+            <Footer />
         </>
     )
 }
