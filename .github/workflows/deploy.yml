@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     environment:
-      name: preview
+      name: production
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
