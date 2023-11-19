@@ -1,4 +1,11 @@
-<div class="wrapper">
+---
+interface Props {
+    wide?: boolean;
+}
+const { wide } = Astro.props;
+---
+
+<div class:list={["wrapper", { wide }]}>
     <slot />
 </div>
 <style lang="scss">
@@ -6,5 +13,9 @@
         max-width: 1080px;
         margin: 0 auto;
         padding: 0 var(--size-m);
+
+        &.wide {
+            max-width: 1280px;
+        }
     }
 </style>

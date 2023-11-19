@@ -23,27 +23,27 @@ const { url, title, years, role, description, color } = Astro.props;
 		</div>
 	</div>
 </a>
-<style define:vars={{ color }}>
+<style lang="scss" define:vars={{ color }}>
 	.card {
 		background: var(--color);
 		padding: var(--size-xl);
 		border-radius: var(--size-m);
-		min-height: 420px;
+		min-height: 440px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		color: unset;
 		text-decoration: unset;
-	}
 
-	.card .content {
-		display: flex;
-		flex-direction: column;
-		gap: var(--size-s);
-	}
+		.content {
+			display: flex;
+			flex-direction: column;
+			gap: var(--size-s);
+		}
 
-	.card .details {
-		display: flex;
-		justify-content: space-between;
+		.details {
+			display: flex;
+			justify-content: space-between;
+		}
 	}
 </style>
