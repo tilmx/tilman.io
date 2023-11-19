@@ -1,0 +1,35 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Wrapper from "../../components/Wrapper.astro";
+import Text from "../../components/Text.astro";
+---
+
+<Layout title="Site's Notice" noBots>
+    <Wrapper>
+        <div class="content">
+            <Text size="huge" serif>Site’s notice</Text>
+            {
+                import.meta.env.NEXT_PUBLIC_SITESNOTICE_ADDRESS?.split(
+                    ", ",
+                ).map((text: string) => (
+                    <Text size="large" serif>
+                        {text}
+                    </Text>
+                ))
+            }
+            <br />
+            <Text size="large" serif>
+                {import.meta.env.NEXT_PUBLIC_SITESNOTICE_EMAIL}
+            </Text>
+            <Text size="large" serif>
+                {import.meta.env.NEXT_PUBLIC_SITESNOTICE_PHONE}
+            </Text>
+        </div>
+    </Wrapper>
+</Layout>
+
+<style>
+    .content {
+        margin-top: var(--size-xxxxl);
+    }
+</style>

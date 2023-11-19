@@ -4,8 +4,8 @@ import Card from "../components/Card.astro";
 import Text from "../components/Text.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-	<div class="intro">
+<Layout title="Tilman Frick">
+	<div class="content">
 		<Text size="huge" serif>
 			Hej <span style={{ opacity: 0.3 }}>/</span>
 		</Text>
@@ -23,8 +23,7 @@ import Text from "../components/Text.astro";
 		<Text size="huge" serif>— T</Text>
 	</div>
 
-	{
-		/*<Card
+	<Card
 		url="https://tomorrow.one"
 		years="2019+"
 		title="Tomorrow"
@@ -50,18 +49,25 @@ import Text from "../components/Text.astro";
 	/>
 	<Card
 		url="https://tilman.io"
-		*TODO*
 		years="2022+"
 		title="Music"
 		role="#Producer"
 		description=""
 		color="#0C2EF9"
-	/>*/
-	}
+	/>
+	<div class="content">
+		<Text size="large" serif>
+			Currently working at Tomorrow. Previously Accenture Interactive,
+			SinnerSchrader, elbdudler.
+		</Text>
+		<Text size="large" serif>
+			Available for selected freelance projects.
+		</Text>
+	</div>
 </Layout>
 
 <style>
-	.intro {
+	.content {
 		margin: var(--size-xxxxxl) auto;
 		padding: 0 var(--size-m);
 		max-width: 1080px;

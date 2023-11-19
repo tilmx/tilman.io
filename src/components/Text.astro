@@ -4,26 +4,24 @@ interface Props {
 	mono?: boolean;
 	size?: "regular" | "large" | "huge";
 }
-
 const { serif, mono, size } = Astro.props;
 ---
 
-<p class:list={["box", size, { serif, mono }]}>
+<p class:list={[size, { serif, mono }]}>
 	<slot />
 </p>
-<style is:global>
+<style is:global lang="scss">
 	body {
 		line-height: 1.2;
 		font-family: "Space Grotesk", sans-serif;
 		font-size: 20px;
-	}
-	/*{Breakpoint.Mobile} {
-		body {
+
+		@media (max-width: 540px) {
 			font-size: 17px;
 		}
-	}*/
+	}
 </style>
-<style>
+<style lang="scss">
 	p {
 		margin: 0;
 	}
@@ -38,20 +36,21 @@ const { serif, mono, size } = Astro.props;
 
 	p.huge {
 		font-size: 48px;
-	}
 
-	/*{Breakpoint.Tablet} {
-		p.huge {
-            font-size: 40px;
+		@media (max-width: 960px) {
+			font-size: 40px;
 		}
-	}
 
-    {Breakpoint.Mobile} {
-		p.huge {
-            font-size: 24px;
-        }
-		p.large {
+		@media (max-width: 540px) {
 			font-size: 24px;
 		}
-	}*/
+	}
+
+	p.large {
+		font-size: 36px;
+
+		@media (max-width: 540px) {
+			font-size: 24px;
+		}
+	}
 </style>
