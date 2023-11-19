@@ -1,24 +1,19 @@
 name: Deploy via SSH
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [try-astro]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
-
-# Allow this job to clone the repo and create a page deployment
-permissions:
-  contents: read
-  id-token: write
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: preview
     steps:
       - name: Checkout your repository using git
         uses: actions/checkout@v3
+
       - name: Install, build, and upload your site output
         uses: withastro/action@v1
         env:
@@ -26,12 +21,6 @@ jobs:
           NEXT_PUBLIC_SITESNOTICE_EMAIL: ${{ vars.NEXT_PUBLIC_SITESNOTICE_EMAIL }}
           NEXT_PUBLIC_SITESNOTICE_PHONE: ${{ vars.NEXT_PUBLIC_SITESNOTICE_PHONE }}
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: preview
-    steps:
       - name: Deploy via SCP
         uses: appleboy/scp-action@v0.1.4
         with:
