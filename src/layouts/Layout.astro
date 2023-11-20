@@ -5,20 +5,21 @@ import Footer from "../components/Footer.astro";
 
 interface Props {
 	title: string;
+	description?: string;
 	noBots?: boolean;
 }
 
-const { title, noBots } = Astro.props;
+const { title, description, noBots } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
+		{description && <meta name="description" content={description} />}
 		{noBots && <meta name="robots" content="noindex" />}
 		<script
 			defer
