@@ -1,0 +1,42 @@
+---
+import Text from "./Text.astro";
+interface Props {
+	title?: string;
+}
+const { title } = Astro.props;
+---
+
+<div class="table">
+	<Text>{title}</Text>
+	<div class="table-content">
+		<slot />
+	</div>
+</div>
+<style lang="scss">
+	.table {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		gap: var(--size-xl);
+		border-top: 2px solid var(--color-text-variant);
+		padding-top: var(--size-xl);
+		margin-top: var(--size-xl);
+		line-height: 1.4;
+
+		p,
+		ul {
+			margin: 0;
+		}
+
+		.table-content {
+			display: flex;
+			flex-direction: column;
+			gap: var(--size-l);
+			color: var(--color-text-variant);
+		}
+
+		@media (max-width: 640px) {
+			grid-template-columns: 1fr;
+			gap: var(--size-m);
+		}
+	}
+</style>

@@ -37,6 +37,7 @@ const { title, description, noBots } = Astro.props;
 <style is:global>
 	:root {
 		--color-text: #ffffff;
+		--color-text-variant: #999999;
 		--color-background: #000000;
 
 		--size-xxxs: 4px;
@@ -55,7 +56,9 @@ const { title, description, noBots } = Astro.props;
 		background: var(--color-background);
 		color: var(--color-text);
 	}
-	body {
+	body,
+	p,
+	ul {
 		margin: 0;
 	}
 </style>
