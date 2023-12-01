@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Text from "../components/Text.astro";
+import References from "../components/References.astro";
 import { Image } from "astro:assets";
 import AboutImage from "../images/tilman.jpg";
 import Wrapper from "../components/Wrapper.astro";
@@ -48,7 +49,7 @@ import TomorrowImage from "../images/projects/tomorrow.png";
 			<div class="projects-column">
 				<Card
 					url="https://tomorrow.one"
-					years="2019+"
+					years="2019 → Today"
 					title="Tomorrow"
 					role="#Lead Product Designer"
 					description="Germany's best rated banking app with >120.000 customers."
@@ -58,7 +59,7 @@ import TomorrowImage from "../images/projects/tomorrow.png";
 				/>
 				<Card
 					url="https://github.com/meetalva/alva"
-					years="2016-2019"
+					years="2016 → 2019"
 					title="Alva"
 					role="#Creator, #Product Lead"
 					description="A radically new design tool bringing designers and engineers closer together."
@@ -66,7 +67,7 @@ import TomorrowImage from "../images/projects/tomorrow.png";
 				/>
 				<Card
 					url="https://open.spotify.com/artist/4JfKGyrY5qMstwIjKl4KJR?si=JkkI2ybVR9iWPpB7N2mIBA"
-					years="2022+"
+					years="2022 → Today"
 					title="Music"
 					role="#Producer"
 					description="Combining electronic music with piano and self-recorded samples from Hamburg."
@@ -89,7 +90,7 @@ import TomorrowImage from "../images/projects/tomorrow.png";
 				</div>
 				<Card
 					url="https://invisiblehotels.com"
-					years="2023+"
+					years="2023 → Today"
 					title="Invisible Hotels"
 					role="#Idea, #Design, #Code"
 					description="A collection of lovely, minimalistic, and fancy hotels."
@@ -100,9 +101,12 @@ import TomorrowImage from "../images/projects/tomorrow.png";
 	</Wrapper>
 	<Wrapper>
 		<div class="content">
+			<References />
+		</div>
+		<div class="content">
 			<Text size="large" serif>
-				Currently working at Tomorrow. Previously: Accenture
-				Interactive, SinnerSchrader, elbdudler.
+				Currently working at Tomorrow. <br />
+				 Previously: Accenture Interactive, SinnerSchrader, elbdudler.
 			</Text>
 			<Text size="large" serif>
 				Available for selected freelance projects.

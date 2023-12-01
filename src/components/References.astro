@@ -1,0 +1,44 @@
+---
+
+---
+
+<div class="references">
+	<img src="/references/tom.svg" alt="" />
+	<img src="/references/aud.svg" class="medium" alt="" />
+	<img src="/references/rbf.svg" class="large" alt="" />
+	<img src="/references/phi.svg" alt="" />
+</div>
+<style lang="scss">
+	.references {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--size-m);
+		justify-content: space-between;
+		align-items: center;
+
+		img {
+			height: 36px;
+			width: auto;
+
+			@media (max-width: 720px) {
+				height: 24px;
+			}
+
+			&.medium {
+				height: 48px;
+
+				@media (max-width: 720px) {
+					height: 36px;
+				}
+			}
+
+			&.large {
+				height: 72px;
+
+				@media (max-width: 720px) {
+					height: 48px;
+				}
+			}
+		}
+	}
+</style>
