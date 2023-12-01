@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
+import Button from "../components/Button.astro";
 import Text from "../components/Text.astro";
 import References from "../components/References.astro";
 import { Image } from "astro:assets";
@@ -104,15 +105,16 @@ import InvisibleHotelsImage from "../images/projects/invisible-hotels.png";
 	<Wrapper>
 		<div class="content">
 			<References />
-		</div>
-		<div class="content">
 			<Text size="large" serif>
-				Currently working at Tomorrow. <br />
-				 Previously: Accenture Interactive, SinnerSchrader, elbdudler.
+				Currently working at Tomorrow. Previously: Accenture
+				Interactive, SinnerSchrader, elbdudler.
 			</Text>
 			<Text size="large" serif>
 				Available for selected freelance projects.
 			</Text>
+			<div>
+				<Button href="mailto:sayhello@tilman.io">Get in touch →</Button>
+			</div>
 		</div>
 	</Wrapper>
 </Layout>

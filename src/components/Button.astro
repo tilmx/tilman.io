@@ -1,0 +1,27 @@
+---
+interface Props {
+	href?: string;
+}
+const { href } = Astro.props;
+---
+
+<a href={href} target="_blank" class="button text bold"><slot /></a>
+<style lang="scss">
+	.button {
+		color: unset;
+		text-decoration: unset;
+		display: inline-block;
+		padding: var(--size-s) var(--size-m);
+		border-radius: var(--size-l);
+		border: 2px solid var(--color-text);
+
+		&:hover {
+			background: var(--color-text);
+			color: var(--color-background);
+		}
+
+		@media (max-width: 540px) {
+			padding: var(--size-xs) var(--size-s);
+		}
+	}
+</style>
