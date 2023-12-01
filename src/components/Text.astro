@@ -1,12 +1,18 @@
 ---
 interface Props {
 	serif?: boolean;
+	bold?: boolean;
 	size?: "small" | "regular" | "large" | "huge";
 }
-const { serif, size } = Astro.props;
+const { serif, bold, size } = Astro.props;
 ---
 
-<p class:list={[size, { serif }]}><slot /></p>
+<p class:list={["text", size, { serif, bold }]}><slot /></p>
+<style>
+	p {
+		margin: 0;
+	}
+</style>
 <style is:global lang="scss">
 	body {
 		line-height: 1.2;
@@ -17,40 +23,43 @@ const { serif, size } = Astro.props;
 			font-size: 18px;
 		}
 	}
-</style>
-<style lang="scss">
-	p {
-		margin: 0;
-	}
 
-	p.serif {
+	.text.serif {
 		font-family: "EB Garamond", serif;
 	}
 
-	p.small {
+	.text.sans-serif {
+		font-family: "Rubik", serif;
+	}
+
+	.text.bold {
+		font-weight: 600;
+	}
+
+	.text.small {
 		font-size: 12px;
 	}
 
-	p.large {
-		font-size: 36px;
+	.text.large {
+		font-size: 40px;
 	}
 
-	p.huge {
+	.text.huge {
 		font-size: 48px;
 	}
 
 	@media (max-width: 960px) {
-		p.huge {
+		.text.huge {
 			font-size: 40px;
 		}
 	}
 
 	@media (max-width: 540px) {
-		p.huge {
+		.text.huge {
 			font-size: 30px;
 		}
 
-		p.large {
+		.text.large {
 			font-size: 26px;
 		}
 	}

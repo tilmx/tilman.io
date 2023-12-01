@@ -21,8 +21,11 @@ const { url, title, years, role, description, color, textColor, image } =
 
 <a class="card" href={url} target="_blank">
 	<div class="card-inner">
-		<Text size="large">{title}</Text>
-		<Text>{description}</Text>
+		<Text size="large">
+			<span class="text bold">{title}</span>
+			<span class="text separator serif">/</span>
+			<span class="text serif">{description}</span>
+		</Text>
 		<div class="details">
 			<Tag>{role}</Tag>
 			<Tag>{years}</Tag>
@@ -34,11 +37,10 @@ const { url, title, years, role, description, color, textColor, image } =
 	.card {
 		background: var(--color);
 		border-radius: var(--size-m);
-		min-height: 460px;
+		min-height: 540px;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		color: unset;
 		color: var(--textColor);
 		text-decoration: unset;
 		transition: transform 0.2s ease-in-out;
@@ -71,6 +73,10 @@ const { url, title, years, role, description, color, textColor, image } =
 			display: flex;
 			flex-direction: column;
 			gap: var(--size-xs);
+
+			.separator {
+				opacity: 0.3;
+			}
 
 			@media (max-width: 540px) {
 				padding: var(--size-m);
