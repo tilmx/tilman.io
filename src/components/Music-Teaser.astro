@@ -1,0 +1,48 @@
+---
+interface Props {
+    service: string;
+    link: string;
+}
+const { service, link } = Astro.props;
+const getReadibleServiceName = (service: string) => {
+    switch (service) {
+        case "spotify":
+            return "Spotify";
+        case "appleMusic":
+            return "Apple Music";
+        case "itunes":
+            return "iTunes";
+        case "deezer":
+            return "Deezer";
+        default:
+            return service;
+    }
+};
+---
+
+<a class="teaser" href={link} target="_blank">
+    <img class="service-icon" src={`/music/service/${service}.svg`} />
+    {getReadibleServiceName(service)}
+</a>
+
+<style lang="scss">
+    .teaser {
+        display: flex;
+        align-items: center;
+        gap: var(--size-xs);
+        padding: var(--size-xs) var(--size-s);
+        margin: 0 calc(-1 * var(--size-s));
+        border-radius: var(--size-xxs);
+        background: lightgray;
+        color: unset;
+        text-decoration: unset;
+        max-width: 480px;
+        margin: var(--size-xxs) auto;
+        box-sizing: border-box;
+    }
+    .service-icon {
+        height: var(--size-l);
+        width: auto;
+        display: block;
+    }
+</style>

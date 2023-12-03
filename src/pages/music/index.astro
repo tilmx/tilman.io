@@ -1,0 +1,33 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Wrapper from "../../components/Wrapper.astro";
+import Text from "../../components/Text.astro";
+import Releases from "../../data/music-releases.json";
+---
+
+<Layout title="Tilman Frick — Music">
+    <Wrapper>
+        <div class="content">
+            <Text size="huge">Music</Text>
+            {
+                Releases.map((release) => (
+                    <a href={"./" + release.id}>
+                        <Text size="large" serif>
+                            {release.title}
+                        </Text>
+                    </a>
+                ))
+            }
+        </div>
+    </Wrapper>
+</Layout>
+
+<style lang="scss">
+    .content {
+        margin-top: var(--size-xxxxl);
+    }
+    a {
+        color: unset;
+        text-decoration: unset;
+    }
+</style>

@@ -1,0 +1,83 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import DimensionsImage from "../../images/music/album/dimensions.jpg";
+import FramedImage from "../../images/music/album/framed.jpg";
+import Wrapper from "../../components/Wrapper.astro";
+import MusicTeaser from "../../components/Music-Teaser.astro";
+import Releases from "../../data/music-releases.json";
+
+export function getStaticPaths() {
+    return Releases.map((release) => ({
+        params: { release: release.id },
+    }));
+}
+const release = Releases.find(
+    (releaseContent) => releaseContent.id === Astro.params.release,
+);
+const getAlbumCoverImage = (release) => {
+    switch (release) {
+        case "framed":
+            return FramedImage;
+        case "dimensions":
+            return DimensionsImage;
+        default:
+            "/fo.jpg";
+    }
+};
+---
+
+<Layout title="Tilman Frick — Music">
+    <Wrapper>
+        <div class="content">
+            <Image
+                src={getAlbumCoverImage(release?.id) || FramedImage}
+                class="album"
+                alt="Album Cover"
+            />
+            <div class="information">
+                <p class="title text large bold">{release?.title}</p>
+                <p class="description text serif">by Tilman Frick</p>
+            </div>
+            <div class="links">
+                {
+                    release &&
+                        Object.entries(release.links).map(([service, link]) => {
+                            return (
+                                <MusicTeaser service={service} link={link} />
+                            );
+                        })
+                }
+            </div>
+        </div>
+    </Wrapper>
+</Layout>
+
+<style lang="scss">
+    :global(html) {
+        background: var(--color-text);
+        color: var(--color-background);
+    }
+    .content {
+        margin: var(--size-xxxl) auto;
+    }
+    .album {
+        display: block;
+        max-width: 480px;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        border-radius: var(--size-m);
+        box-shadow: 0 var(--size-m) var(--size-xxl) rgba(0, 0, 0, 0.3);
+    }
+    .information {
+        margin: var(--size-l) 0;
+        text-align: center;
+    }
+    .title {
+        margin-bottom: var(--size-xxxs);
+    }
+    .description {
+        opacity: 0.75;
+    }
+</style>
