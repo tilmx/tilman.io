@@ -15,7 +15,7 @@ export function getStaticPaths() {
 const release = Releases.find(
     (releaseContent) => releaseContent.id === Astro.params.release,
 );
-const getAlbumCoverImage = (release) => {
+const getAlbumCoverImage = (release?: string) => {
     switch (release) {
         case "framed":
             return FramedImage;
