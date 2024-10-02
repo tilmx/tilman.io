@@ -23,12 +23,7 @@ const { title, description, noBots } = Astro.props;
 		<title>{title}</title>
 		{description && <meta name="description" content={description} />}
 		{noBots && <meta name="robots" content="noindex" />}
-		<script
-			defer
-			type="text/javascript"
-			src="https://api.pirsch.io/pirsch-extended.js"
-			id="pirschextendedjs"
-			data-code="lYz9SSuWC7XV92r1EEj0WOsHdUJTM8V2"></script>
+		<script defer data-domain="tilman.io" src="https://plausible.io/js/script.outbound-links.js" />
 	</head>
 	<body>
 		<slot />
