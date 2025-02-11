@@ -12,7 +12,7 @@
   "dependencies": {
     "@fontsource/eb-garamond": "^5",
     "@fontsource/rubik": "^5",
-    "astro": "^4",
+    "astro": "^5",
     "sass": "^1"
   },
   "devDependencies": {
