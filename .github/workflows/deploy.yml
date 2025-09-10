@@ -1,5 +1,7 @@
 name: Deploy via SSH
-
+permissions:
+  contents: read
+  
 on:
   push:
     branches: [main]
