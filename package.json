@@ -17,6 +17,6 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0",
-    "typescript": "^5"
+    "typescript": "^6"
   }
 }
