@@ -14,17 +14,19 @@ jobs:
       name: production
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
       - name: Install, build, and upload your site output
-        uses: withastro/action@v2
+        uses: withastro/action@v6
+        with:
+          node-version: 24
         env:
           NEXT_PUBLIC_SITESNOTICE_ADDRESS: ${{ vars.NEXT_PUBLIC_SITESNOTICE_ADDRESS }}
           NEXT_PUBLIC_SITESNOTICE_EMAIL: ${{ vars.NEXT_PUBLIC_SITESNOTICE_EMAIL }}
           NEXT_PUBLIC_SITESNOTICE_PHONE: ${{ vars.NEXT_PUBLIC_SITESNOTICE_PHONE }}
 
       - name: Deploy via SCP
-        uses: appleboy/scp-action@v0.1.4
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.SSH_SERVER }}
           username: ${{ secrets.SSH_USER }}
